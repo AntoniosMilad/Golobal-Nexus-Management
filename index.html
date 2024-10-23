@@ -41,6 +41,316 @@
     transform: scale(1.05); /* Zoom in on hover */
 }
 
+
+        /* .video-section,
+        .image-section {
+            height: 100%;
+        }
+
+        .custom-carousel-item {
+            display: flex;
+        }
+
+        .video-container {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%
+            object-fit: cover;
+        }
+
+        .image-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 5px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } */
+
+
+/* Main container layout */
+.custom-carousel-item {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+    
+}
+
+.carousel-content {
+    display: flex;
+    flex: 1;
+    flex-direction: row; /* Side-by-side layout for video and images */
+    margin: 0;
+    padding: 0;
+}
+
+/* Left Section: Video */
+.left-section {
+    flex: 2; /* Takes up 2/3 of the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.left-section video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0; /* No space around video */
+    padding: 0; /* No padding around video */
+}
+
+/* Right Section: Images beside video */
+.right-section {
+    flex: 1; /* Takes up 1/3 of the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for the images beside video */
+    gap: 10px; /* Add space between images */
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0; /* No extra margin */
+    padding: 0; /* No extra padding */
+}
+
+/* Bottom Section: Images under video */
+.bottom-section {
+    padding: 10px 0; /* Optional padding for spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-image-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Six images in one row */
+    gap: 10px; /* Space between images */
+    width: 100%;
+}
+
+.bottom-image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0; /* No extra margin */
+    padding: 0; /* No extra padding */
+}
+
+.transparent-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+}
+
+.bordered-img {
+    /* border: 5px solid #000;  */
+    /* border-radius: 10px;  */
+    padding: 10px; /* Optional: Adds some spacing inside the border */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  */
+    /* Optional: Adds a subtle shadow */
+}
+
+
+.aboutcore-img,
+.feature-img {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    width:100%;
+}
+
+.aboutcore-img img,
+.feature-img img {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.aboutcore-img img:last-child,
+.feature-img img:last-child {
+    /* margin: 20% 0 0 40%; */
+}
+
+.aboutcore-img::before,
+.feature-img::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 80%;
+    top: 10%;
+    left: 20%;
+    /* border: 5px solid var(--primary); */
+    /* z-index: -1; */
+}
+
+
+
+
+/* Add shading to the text */
+.hover-clear-text p {
+    color: rgba(0, 0, 0, 0.5); /* Darker semi-transparent text */
+    /* background-color: rgba(0, 0, 0, 0.2);  */
+    /* Darker shading background */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px; /* Optional: Add some border radius for smooth edges */
+}
+
+/* Add hover effect to clear the text */
+.hover-clear-text:hover p {
+    color: rgba(0, 0, 0, 1); /* Fully visible text on hover */
+    background-color: transparent; /* Remove the shading */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-content {
+        display: flex;
+        flex-direction: column; 
+        height: 100px;
+        
+        /* Stack video and images vertically on small screens */
+    }
+
+    .right-section,
+    .image-grid {
+        display: none; /* Hide the right section (images beside video) and image grid */
+    }
+
+    .left-section video {
+    width: 100%;
+    height: 590px;
+    /* object-fit: cover; */
+    margin: 0; /* No space around video */
+    padding: 0; /* No padding around video */
+}
+
+    .left-section {
+        flex: none; /* Ensure the video takes full width */
+        width: 100%; /* Full width for the video */
+    }
+
+    .bottom-section {
+        display: none; /* Ensure the bottom section is visible */
+
+}
+
+    .bottom-image-grid {
+        grid-template-columns: repeat(6, 1fr); /* Show 6 images under the video in one row */
+    }
+}
+
+@media (max-width: 1228px) {
+    .carousel-content {
+        display: flex;
+        flex-direction: column; 
+        height: 100px;
+        
+        /* Stack video and images vertically on small screens */
+    }
+
+    .right-section,
+    .image-grid {
+        display: none; /* Hide the right section (images beside video) and image grid */
+    }
+
+    .left-section video {
+    width: 100%;
+    height: 590px;
+    /* object-fit: cover; */
+    margin: 0; /* No space around video */
+    padding: 0; /* No padding around video */
+}
+
+    .left-section {
+        flex: none; /* Ensure the video takes full width */
+        width: 100%; /* Full width for the video */
+    }
+
+    .bottom-section {
+        display: none; /* Ensure the bottom section is visible */
+
+}
+
+    .bottom-image-grid {
+        grid-template-columns: repeat(6, 1fr); /* Show 6 images under the video in one row */
+    }
+}
+
+@media (max-width: 1500px) {
+    .carousel-content {
+        display: flex;
+        flex-direction: column; 
+        height: 100px;
+        
+        /* Stack video and images vertically on small screens */
+    }
+
+    .right-section,
+    .image-grid {
+        display: none; /* Hide the right section (images beside video) and image grid */
+    }
+
+    .left-section video {
+    width: 100%;
+    height: 590px;
+    /* object-fit: cover; */
+    margin: 0; /* No space around video */
+    padding: 0; /* No padding around video */
+}
+
+    .left-section {
+        flex: none; /* Ensure the video takes full width */
+        width: 100%; /* Full width for the video */
+    }
+
+    .bottom-section {
+        display: none; /* Ensure the bottom section is visible */
+
+}
+
+    .bottom-image-grid {
+        grid-template-columns: repeat(6, 1fr); /* Show 6 images under the video in one row */
+    }
+}
+
+/*  */
+
     </style>
 </head>
 
@@ -53,7 +363,7 @@
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
@@ -66,10 +376,7 @@
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
-                <!-- <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                    <a class="text-body px-2" href="">Terms</a>
-                    <a class="text-body px-2" href="">Privacy</a>
-                </div> -->
+           
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
@@ -78,14 +385,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <img class="me-3" src="img/icons/icon-1.png" style="width:100px; height: 110px;" alt="Icon">
+        <a href="index.html" class="navbar-brand ms-0 ms-lg-0 " >
+            <img class="me-3" src="img/icons/icon-1.png" style="width:220px; height: 100px; " alt="Icon">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -95,7 +402,7 @@
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="project.html" class="nav-item nav-link">Our Projects</a>
+                <a href="project.html" class="nav-item nav-link">Projects</a>
                 <!-- <a href="team.html" class="nav-item nav-link">Team Members</a> -->
                 <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -114,54 +421,150 @@
     <!-- Navbar End -->
 
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-1.jpg'>">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-1 text-white animated slideInDown">Building Futures not Spaces</h1>
-                                <!-- <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p> -->
-                                <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft">Read More</a>
+   <!-- Carousel Start -->
+<div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="owl-carousel header-carousel position-relative">
+       
+            <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/carousel-1.jpg'>">
+                <!-- Left section: Video -->
+                <div class="carousel-content">
+                    <div class="left-section video-section" style="opacity: 0.7;">
+                        <video src="img/slidervideo.mp4" autoplay muted loop></video> 
+                        <div class="owl-carousel-inner">
+                            <div class="container">
+                                <div class="row justify-content-start">
+                                    <div class="col-10 col-lg-8">
+                                        <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; margin-bottom: 20px;">
+                                            <h1 style=" color: #000;" class="display-1 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h1>
+                                          </div>
+                                        <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" style=" color: #000;">Read More</a>
+                                    </div>
+                                </div>
                             </div>
+                        </div>          
+                    </div>
+                    
+                    <!-- Right section: Images beside video -->
+                    <div class="right-section image-section" style="opacity: 0.7;">
+                        <div class="image-grid" style=" padding:3px">
+                            <img src="img/sliderimages/1.webp" alt="Project 1" style="height: 100%; width:100%">
+                            <img src="img/sliderimages/2.PNG" alt="Project 2" style="height: 100%; width:100%">
+                            <img src="img/sliderimages/3.jpg" alt="Project 5" style="height: 100%; width:100%">
+                            <img src="img/sliderimages/4.jpg" alt="Project 6" style="height: 100%; width:100%">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-2.jpg'>">
-                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-1 text-white animated slideInDown">Building Futures not Spaces</h1>
-                                <!-- <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p> -->
-                                <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft">Read More</a>
-                            </div>
-                        </div>
+    
+                <!-- Bottom section: Additional images under video -->
+                <div class="bottom-section image-section" style="opacity: 0.7;">
+                    <div class="bottom-image-grid">
+                        <img src="img/sliderimages/5.jpg" alt="Project 1" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/6.webp" alt="Project 2" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/7.jpg" alt="Project 5" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/8.jpg" alt="Project 6" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/9.jpg" alt="Project 1" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/10.jpg" alt="Project 2" style="height: 100%; width:100%">
+
+
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-3.jpg'>">
-                <img class="img-fluid" src="img/carousel-3.jpg" alt="">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-1 text-white animated slideInDown">Building Futures not Spaces</h1>
-                                <!-- <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p> -->
-                                <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft">Read More</a>
+
+            <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/carousel-1.jpg'>">
+                <!-- Left section: Video -->
+                <div class="carousel-content">
+                    <div class="left-section video-section" style="opacity: 0.7;">
+                        <video src="img/videoslider3.mov" autoplay muted loop></video>   
+                        <div class="owl-carousel-inner">
+                            <div class="container">
+                                <div class="row justify-content-start">
+                                    <div class="col-10 col-lg-8">
+                                        <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; margin-bottom: 20px;">
+                                            <h1 style=" color: #000;" class="display-1 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h1>
+                                          </div>
+                                        <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" style=" color: #000;">Read More</a>
+                                    </div>
+                                </div>
                             </div>
+                        </div>     
+                    </div>
+                    
+                    <!-- Right section: Images beside video -->
+                    <div class="right-section image-section" style="opacity: 0.7;">
+                        <div class="image-grid" style=" padding:2px">
+                            <img src="img/sliderimages/11.jpg" alt="Project 1" style="height: 100%; width:100%">
+                            <img src="img/sliderimages/12.jpg" alt="Project 2" style="height: 100%; width:100%">
+                            <img src="img/sliderimages/15.jpg" alt="Project 1" style="height: 100%; width:100%">
+                            <img src="img/sliderimages/16.jpg" alt="Project 2" style="height: 100%; width:100%">
                         </div>
                     </div>
                 </div>
+    
+                <!-- Bottom section: Additional images under video -->
+                <div class="bottom-section image-section" style="opacity: 0.7;">
+                    <div class="bottom-image-grid">
+                      
+                        <img src="img/sliderimages/17.jpg" alt="Project 5" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/18.png" alt="Project 6" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/19.webp" alt="Project 1" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/20.jpg" alt="Project 2" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/21.jpg" alt="Project 1" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/44.webp" alt="Project 2" style="height: 100%; width:100%">
+
+
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/carousel-1.jpg'>">
+                <!-- Left section: Video -->
+                <div class="carousel-content">
+                    <div class="left-section video-section" style="opacity: 0.7;">
+                        <video src="img/videoslider4.mov" autoplay muted loop></video>   
+                        <div class="owl-carousel-inner">
+                            <div class="container">
+                                <div class="row justify-content-start">
+                                    <div class="col-10 col-lg-8">
+                                        <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; margin-bottom: 20px;">
+                                            <h1 style=" color: #000;" class="display-1 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h1>
+                                          </div>
+                                        <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" style=" color: #000;">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    
+                   
+
+                    <!-- Right section: Images beside video -->
+                    <div class="right-section image-section" style="opacity: 0.7;">
+                        <div class="image-grid" style=" padding:1px">
+                            <img src="img/sliderimages/32.jpg" alt="Project 1" style="height: 100%; width:100%">
+                            <img src="img/sliderimages/34.jpg" alt="Project 2" style="height: 100%; width:100%">
+                            <img src="img/sliderimages/35.jpg" alt="Project 5" style="height: 100%; width:100%">
+                            <img src="img/sliderimages/36.jpg" alt="Project 6" style="height: 100%; width:100%">
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Bottom section: Additional images under video -->
+                <div class="bottom-section image-section" style="opacity: 0.7;">
+                    <div class="bottom-image-grid">
+                        <img src="img/sliderimages/37.jpg" alt="Project 1" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/38.webp" alt="Project 2" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/39.jpg" alt="Project 5" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/40.jpg" alt="Project 6" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/41.png" alt="Project 1" style="height: 100%; width:100%">
+                        <img src="img/sliderimages/42.jpeg" alt="Project 6" style="height: 100%; width:100%">
+            
+
+                    </div>
+                </div>
+            </div>
     </div>
-    <!-- Carousel End -->
+</div>
+<!-- Carousel End -->
 
 
     <!-- Facts Start -->
@@ -203,7 +606,7 @@
 
 
    <!-- our value Start -->
-   <div class="container-xxl py-5">
+   <!-- <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -211,14 +614,35 @@
             </div>
             <div class="col-lg-12 wow fadeIn justify-content-center" data-wow-delay="0.5s" style="justify-content: center; text-align: center;">
                 <h4 class="section-title justify-content-center">Business Core Value</h4>
-                <h1 class="display-5 mb-4">Our Value</h1>
-                <p>Global Nexus Management is more than just a construction project management firm; we are your trusted partner in bringing visions to life. Whether you are beginning a new development or seeking to optimize an existing project, we have the expertise, resources, and dedication to make your project a reality. </p>
+                <p>Global Nexus Management isn't just a project management firm; we are your trusted partner in turning your visions into reality. Whether you're starting a new development or looking to enhance an existing project, we have the expertise, resources, and dedication to make your project a success. </p>
               
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- our value End -->
+
+ <!-- About Start -->
+ <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="aboutcore-img">
+                    <!-- Image with border -->
+                    <img class="img-fluid bordered-img" src="img/sliderimages/10.jpg" alt="">
+                    <!-- <img class="img-fluid bordered-img" src="img/sliderimages/45.jpg" alt=""> -->
+
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <h4 class="section-title">Business Core</h4>
+                <h1 class="display-5 mb-4">Business Core Values</h1>
+                <p>Global Nexus Management isn't just a project management firm; we are your trusted partner in turning your visions into reality. Whether you're starting a new development or looking to enhance an existing project, we have the expertise, resources, and dedication to make your project a success.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
 
 
   <!-- our value Start -->
@@ -228,99 +652,57 @@
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               
             </div>
-            <div class="col-lg-12 wow fadeIn " data-wow-delay="0.5s" style="justify-content: center; text-align: center;">
+            <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5s" style="justify-content: center; text-align: center;">
                 <!-- <h4 class="section-title justify-content-center">Our Business Core Values</h4> -->
-                <h1 class="display-5 mb-4">Our Business Core Values </h1>
-                <p>Safety is Our Priority at all times
-                </p>
+                <!-- <h1 class="display-5 mb-4">Business Core Values </h1> -->
+                <h3 class=" mb-4">Safety is Our Priority at all times
+                </h3>
               
 
                 <!-- <div class="container-xxl py-5">
                     <div class="container "> -->
                         <div class="row g-4">
                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="fact-item text-center bg-light h-100 p-5 ">
-                                    <!-- <div class="fact-icon">
-                                        <img src="img/icons/icon-2.png" alt="Icon">
-                                    </div> -->
+                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
                                     <h3 class="mb-3">Integrity and Transparency</h3>
                                     <p class="mb-0">We prioritize establishing enduring relationships with our clients, partners, and stakeholders. Our operations are founded on integrity and transparency, ensuring that each project is managed to the highest ethical standards.</p>
                                 </div>
                             </div>
-
-
+                        
                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="fact-item text-center bg-light h-100 p-5 ">
-                                    <!-- <div class="fact-icon">
-                                        <img src="img/icons/icon-3.png" alt="Icon">
-                                    </div> -->
+                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
                                     <h3 class="mb-3">Expertise and Experience</h3>
-                                    <p class="mb-0">With decades of experience in the construction industry, our team of professionals provides extensive knowledge and expertise for every project. Our thorough understanding of the local market and regulatory landscape allows us to handle complex projects with ease and efficiency.
-                                    </p>
+                                    <p class="mb-0">With decades of experience in the construction industry, our team of professionals provides extensive knowledge and expertise for every project. Our thorough understanding of the local market and regulatory landscape allows us to handle complex projects with ease and efficiency.</p>
                                 </div>
                             </div>
-
-
-
+                        
                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="fact-item text-center bg-light h-100 p-5 ">
-                                    <!-- <div class="fact-icon">
-                                        <img src="img/icons/icon-4.png" alt="Icon">
-                                    </div> -->
-                                    <h3 class="mb-3">Client-Centered Approach</h3>
-                                    <p class="mb-0">Our clients are our top priority. We invest time in comprehending their individual needs and objectives, and we customize our services to provide exceptional, and unique solutions. From the beginning to the end of a project, we are committed to turning our clients' ideas into reality. 
-                                    </p>
+                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
+                                    <h3 class="mb-3">Client-Center Approach</h3>
+                                    <p class="mb-0">Clients are our top priority. We invest time in comprehending their individual needs and objectives, and we customize our services to provide exceptional, and unique solutions. From the beginning to the end of a project, we are committed to turning our clients' ideas into reality.</p>
                                 </div>
                             </div>
-
-
-
-
-
-
+                        
                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="fact-item text-center bg-light h-100 p-5 ">
-                                    <!-- <div class="fact-icon">
-                                        <img src="img/icons/icon-4.png" alt="Icon">
-                                    </div> -->
+                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
                                     <h3 class="mb-3">Innovation and Sustainability</h3>
                                     <p class="mb-0">In a rapidly evolving industry, we maintain our competitive edge by embracing the latest technologies and sustainable practices. Our dedication to innovation ensures that we deliver state-of-the-art solutions that are not only efficient and forward-thinking but also environmentally responsible.</p>
                                 </div>
                             </div>
-
-
-
+                        
                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="fact-item text-center bg-light h-100 p-5 ">
-                                    <!-- <div class="fact-icon">
-                                        <img src="img/icons/icon-4.png" alt="Icon">
-                                    </div> -->
+                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
                                     <h3 class="mb-3">Quality and Excellence</h3>
                                     <p class="mb-0">We are devoted to maintaining the highest quality standards in every aspect of our work throughout the entire project life cycle. Our attention to detail and unwavering commitment to excellence ensure the successful completion of each project, surpassing expectations.</p>
                                 </div>
                             </div>
-
-
-
-
-
-
+                        
                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="fact-item text-center bg-light h-100 p-5 ">
-                                    <!-- <div class="fact-icon">
-                                        <img src="img/icons/icon-4.png" alt="Icon">
-                                    </div> -->
+                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
                                     <h3 class="mb-3">Collaboration and Teamwork</h3>
-                                    <p class="mb-0">We believe that the most successful outcomes are achieved through collaboration and teamwork. Our comprehensive approach fosters a cooperative environment in which all stakeholders engage in working collectively toward a shared goal, ensuring the successful completion of each project phase.
-                                    </p>
+                                    <p class="mb-0">We believe that the most successful outcomes are achieved through collaboration and teamwork. Our comprehensive approach fosters a cooperative environment in which all stakeholders engage in working collectively toward a shared goal, ensuring the successful completion of each project phase.</p>
                                 </div>
                             </div>
-
-
-
-
-
-
                         </div>
                     <!-- </div>
                 </div> -->
@@ -437,8 +819,8 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img">
-                        <img class="img-fluid" src="img/about-1.jpg" alt="">
-                        <img class="img-fluid" src="img/about-2.jpg" alt="">
+                        <img class="img-fluid" src="img/sliderimages/49.png" alt="">
+                        <img class="img-fluid" src="img/sliderimages/48.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -468,8 +850,8 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Our Services</h4>
-                <h1 class="display-5 mb-4">Our Focus is Modern Services</h1>
+                <h4 class="section-title">Services</h4>
+                <h1 class="display-5 mb-4">Focus is Modern Services</h1>
             </div>
             <div class="row g-4">
                 <p>We initiate the management process early by concentrating on planning, programming, budgeting, scheduling, and establishing the conceptual project and the entire team for success. After obtaining financing, insurance, and contractual commitments, we supervise the entire project from start to finish and handover to operations. Our team ensures that all desired outcomes of stakeholder groups are predetermined and achieved.</p>
@@ -750,24 +1132,29 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Testimonial</h4>
-                <h1 class="display-5 mb-4">Thousands Of Customers Who Trust Us And Our Services</h1>
+                <h4 class="section-title">Reviews</h4>
+                <h1 class="display-5 mb-4">Customers Who Trust Us And Our Services</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
-                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                    <h3>Client Name</h3>
-                    <span class="text-primary">Profession</span>
+                    <p class="fs-5">"Global Nexus Management exceeded our expectations with their professionalism and attention to detail. They completed our residential project on time and within budget. Their team was incredibly knowledgeable, and the final result was stunning!"</p>
+                    <h3>Sarah Al-Maktoum</h3>
+                    <span class="text-primary">Homeowner</span>
                 </div>
                 <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
-                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                    <h3>Client Name</h3>
-                    <span class="text-primary">Profession</span>
+                    <p class="fs-5">"Working with Global Nexus Management on our commercial complex was an absolute pleasure. Their expertise in construction and project management ensured that everything went smoothly, even with tight deadlines."</p>
+                    <h3>Mohammed Al-Nuaimi</h3>
+                    <span class="text-primary">Project Manager, Al-Nuaimi Group</span>
                 </div>
                 <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">
-                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                    <h3>Client Name</h3>
-                    <span class="text-primary">Profession</span>
+                    <p class="fs-5">"From planning to execution, the team at Global Nexus delivered exceptional quality. They were highly responsive to any changes and maintained open communication throughout the process. I highly recommend their services."</p>
+                    <h3>Laila Hassan</h3>
+                    <span class="text-primary">CEO, Horizon Real Estate</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-4.jpg' alt=''>">
+                    <p class="fs-5">"We partnered with Global Nexus Management for a large-scale industrial project. Their ability to manage resources efficiently and stay ahead of schedule was impressive. We are extremely satisfied with the outcome."</p>
+                    <h3>Omar Ahmed</h3>
+                    <span class="text-primary">Operations Manager, Alpha Construction</span>
                 </div>
             </div>      
         </div>
@@ -787,39 +1174,31 @@
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>714-391-0712</p>
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>541-790-1662</p>
 
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>mbotross@gnmusa.com</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>wkinman@gnmusa.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>inquires@gnmusa.com</p>
 
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-               <!-- <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Services</h3>
-                    <a class="btn btn-link" href="">Architecture</a>
-                    <a class="btn btn-link" href="">3D Animation</a>
-                    <a class="btn btn-link" href="">House Planning</a>
-                    <a class="btn btn-link" href="">Interior Design</a>
-                    <a class="btn btn-link" href="">Construction</a>
-                </div> -->
+        
                    <div class="col-lg-3 col-md-6">
                     <h3 class="text-light mb-4">Quick Links</h3>
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="service.html">Our Services</a>
-                    <a class="btn btn-link" href="work.html">Our Work</a>
-                    <!-- <a class="btn btn-link" href="team.html">Our Team</a> -->
+                    <a class="btn btn-link" href="service.html">Services</a>
+                    <a class="btn btn-link" href="project.html">Projects</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <!-- <h3 class="text-light mb-4">Newsletter</h3>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div> -->
+                <div class="col-lg-6 col-md-6">
+                    <h3 class="text-light mb-4">Location</h3>
+                    <div class="container-xxl px-0 wow fadeIn" data-wow-delay="0.1s">
+                        <iframe class="w-100 mb-n2" style="height: 200px; width: 350px;"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.4889263304553!2d-117.83917192401276!3d33.69629537329303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdea1f0de207d%3A0x636a6064474fa651!2s16755%20Von%20Karman%20Ave%2C%20Irvine%2C%20CA%2092606%2C%20USA!5e0!3m2!1sen!2seg!4v1725125678478!5m2!1sen!2seg" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -831,7 +1210,7 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://kemetts.com/">Kemet Technologies</a>
+                        Designed & Developed By <a href="https://kemetts.com/">Kemet Technologies</a>
                     </div>
                 </div>
             </div>
@@ -855,6 +1234,11 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+
+     <!-- JavaScript Libraries -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
