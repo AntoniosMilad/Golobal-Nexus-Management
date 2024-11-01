@@ -105,7 +105,7 @@ h6,
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Roboto";
     font-weight: 900;
     vertical-align: middle;
     margin-left: 8px;
@@ -235,6 +235,22 @@ h6,
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/sliderimages/41.png) center center no-repeat;
     background-size: cover;
 }
+
+.page-header-about-header {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/about-header.jpg) center center no-repeat;
+    background-size: cover;
+}
+.page-header-contact {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/contact.png) center center no-repeat;
+    background-size: cover;
+    height: auto;
+}
+.core-description-paragraph {
+    font-size: 1.1rem; /* Adjust font size */
+    line-height: 1; /* Adjust line height for readability */
+    font-weight: 300; /* Lighten font for elegance */
+}
+
 
 .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
@@ -486,7 +502,7 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Font Awesome 5 Free";
+    font-family: "Roboto";
     font-weight: 900;
     color: var(--primary);
     background: #FFFFFF;
@@ -532,8 +548,8 @@ h6,
 
 .footer .btn.btn-link::before {
     position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
+    /* content: "\f105"; */
+    font-family: "Roboto";
     font-weight: 900;
     color: var(--primary);
     margin-right: 10px;
@@ -550,7 +566,7 @@ h6,
 }
 
 .footer .copyright {
-    padding: 25px 0;
+    padding: 10px 0;
     font-size: 15px;
     border-top: 1px solid rgba(256, 256, 256, .1);
 }

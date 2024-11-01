@@ -42,6 +42,77 @@
 }
 
 
+  /* Make the description text larger and with more line spacing */
+  .core-description {
+        font-size: 1.1rem; /* Adjust font size */
+        line-height: 1.4; /* Adjust line height for readability */
+        font-weight: 300; /* Lighten font for elegance */
+    }
+
+    .core-description-center {
+        font-size: 1.1rem; /* Adjust font size */
+        line-height: 1.4; /* Adjust line height for readability */
+        font-weight: 300; /* Lighten font for elegance */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .core-description-paragraph {
+        font-size: 1.1rem; /* Adjust font size */
+        line-height: 1; /* Adjust line height for readability */
+        font-weight: 300; /* Lighten font for elegance */
+    }
+
+
+
+    /* Card container with fixed height */
+    .flip-card {
+        perspective: 1000px;
+        height: 350px; /* Set fixed height */
+    }
+
+    /* Card inner with fixed height */
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%; /* Match height of container */
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    /* Flip the card on hover */
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Front and back of card */
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%; /* Match height of inner container */
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Back of card with rotation */
+    .flip-card-back {
+        transform: rotateY(180deg);
+    }
+
+    /* Style for content inside cards */
+    .flip-card-front h3,
+    .flip-card-back p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+
         /* .video-section,
         .image-section {
             height: 100%;
@@ -106,40 +177,42 @@
     padding: 0;
 }
 
-.left-section video {
+ /* Style for left section */
+ .left-section video {
+    height: 100%;
     width: 100%;
-    height: auto;
     object-fit: cover;
     margin: 0; /* No space around video */
     padding: 0; /* No padding around video */
-}
+  }
 
-/* Right Section: Images beside video */
-.right-section {
-    flex: 1; /* Takes up 1/3 of the width */
+  /* Style for right section to match video height */
+  .right-section {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35%; /* adjust as needed */
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
-}
+    flex:1;
+  }
 
-.image-grid {
+  /* Image grid styling for right section */
+  .image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for the images beside video */
-    gap: 10px; /* Add space between images */
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
+    grid-template-columns: repeat(2, 1fr); /* Adjust columns as needed */
+    gap: 5px; /* Space between images */
+    height: 100%; /* Ensures grid matches video height */
+  }
 
-.image-grid img {
-    width: 100%;
+  /* Individual images */
+  .image-grid img {
+    width: 80%;
     height: auto;
     object-fit: cover;
-    margin: 0; /* No extra margin */
-    padding: 0; /* No extra padding */
-}
+  }
 
 /* Bottom Section: Images under video */
 .bottom-section {
@@ -350,6 +423,35 @@
 }
 
 /*  */
+.about-img-who {
+    position: relative;
+    height: 100%;
+    min-height: 300px;
+
+}
+
+.about-img-who img {
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.about-img-who img:last-child {
+    margin: 12% 0 0 30%;
+}
+
+.about-img-who::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 80%;
+    top: 10%;
+    left: 20%;
+    border: 5px solid var(--primary);
+    z-index: -1;
+}
+
 
     </style>
 </head>
@@ -425,7 +527,7 @@
 <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="owl-carousel header-carousel position-relative">
        
-            <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/carousel-1.jpg'>">
+            <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/sliderimages/2.PNG'>">
                 <!-- Left section: Video -->
                 <div class="carousel-content">
                     <div class="left-section video-section" style="opacity: 0.7;">
@@ -434,8 +536,8 @@
                             <div class="container">
                                 <div class="row justify-content-start">
                                     <div class="col-10 col-lg-8">
-                                        <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; margin-bottom: 20px;">
-                                            <h1 style=" color: #000;" class="display-1 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h1>
+                                        <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; ">
+                                            <h5 style=" color: #000;" class="display-4 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h5>
                                           </div>
                                         <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" style=" color: #000;">Read More</a>
                                     </div>
@@ -456,7 +558,7 @@
                 </div>
     
                 <!-- Bottom section: Additional images under video -->
-                <div class="bottom-section image-section" style="opacity: 0.7;">
+                <!-- <div class="bottom-section image-section" style="opacity: 0.7;">
                     <div class="bottom-image-grid">
                         <img src="img/sliderimages/5.jpg" alt="Project 1" style="height: 100%; width:100%">
                         <img src="img/sliderimages/6.webp" alt="Project 2" style="height: 100%; width:100%">
@@ -467,10 +569,10 @@
 
 
                     </div>
-                </div>
+                </div> -->
             </div>
 
-            <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/carousel-1.jpg'>">
+            <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/sliderimages/12.jpg'>">
                 <!-- Left section: Video -->
                 <div class="carousel-content">
                     <div class="left-section video-section" style="opacity: 0.7;">
@@ -479,8 +581,8 @@
                             <div class="container">
                                 <div class="row justify-content-start">
                                     <div class="col-10 col-lg-8">
-                                        <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; margin-bottom: 20px;">
-                                            <h1 style=" color: #000;" class="display-1 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h1>
+                                        <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; ">
+                                            <h5 style=" color: #000;" class="display-4 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h5>
                                           </div>
                                         <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" style=" color: #000;">Read More</a>
                                     </div>
@@ -501,7 +603,7 @@
                 </div>
     
                 <!-- Bottom section: Additional images under video -->
-                <div class="bottom-section image-section" style="opacity: 0.7;">
+                <!-- <div class="bottom-section image-section" style="opacity: 0.7;">
                     <div class="bottom-image-grid">
                       
                         <img src="img/sliderimages/17.jpg" alt="Project 5" style="height: 100%; width:100%">
@@ -513,10 +615,10 @@
 
 
                     </div>
-                </div>
+                </div> -->
             </div>
 
-            <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/carousel-1.jpg'>">
+            <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/sliderimages/32.jpg'>">
                 <!-- Left section: Video -->
                 <div class="carousel-content">
                     <div class="left-section video-section" style="opacity: 0.7;">
@@ -526,7 +628,7 @@
                                 <div class="row justify-content-start">
                                     <div class="col-10 col-lg-8">
                                         <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; margin-bottom: 20px;">
-                                            <h1 style=" color: #000;" class="display-1 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h1>
+                                            <h5 style=" color: #000;" class="display-4 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h5>
                                           </div>
                                         <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" style=" color: #000;">Read More</a>
                                     </div>
@@ -549,7 +651,7 @@
                 </div>
     
                 <!-- Bottom section: Additional images under video -->
-                <div class="bottom-section image-section" style="opacity: 0.7;">
+                <!-- <div class="bottom-section image-section" style="opacity: 0.7;">
                     <div class="bottom-image-grid">
                         <img src="img/sliderimages/37.jpg" alt="Project 1" style="height: 100%; width:100%">
                         <img src="img/sliderimages/38.webp" alt="Project 2" style="height: 100%; width:100%">
@@ -560,7 +662,7 @@
             
 
                     </div>
-                </div>
+                </div> -->
             </div>
     </div>
 </div>
@@ -623,21 +725,25 @@
 <!-- our value End -->
 
  <!-- About Start -->
- <div class="container-xxl py-5">
+<div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                 <div class="aboutcore-img">
-                    <!-- Image with border -->
                     <img class="img-fluid bordered-img" src="img/sliderimages/10.jpg" alt="">
-                    <!-- <img class="img-fluid bordered-img" src="img/sliderimages/45.jpg" alt=""> -->
-
                 </div>
             </div>
+
+         
+
+            
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <h4 class="section-title">Business Core</h4>
-                <h1 class="display-5 mb-4">Business Core Values</h1>
-                <p>Global Nexus Management isn't just a project management firm; we are your trusted partner in turning your visions into reality. Whether you're starting a new development or looking to enhance an existing project, we have the expertise, resources, and dedication to make your project a success.</p>
+                <h4 class="display-5 mb-4 justify-content-center" style="font-weight: lighter;">Business Core Values</h4>
+                <p class="core-description justify-content-center">
+                    Global Nexus Management isn't just a project management firm; we are your trusted partner in turning your visions into reality. Whether you're starting a new development or looking to enhance an existing project, we have the expertise, resources, and dedication to make your project a success. <br><br>
+                    From conceptualization to completion, we prioritize every aspect to meet your unique needs. Our commitment to quality, transparency, and efficiency drives us to go above and beyond in delivering exceptional results tailored to your goals.
+                </p>
             </div>
         </div>
     </div>
@@ -662,56 +768,91 @@
                 <!-- <div class="container-xxl py-5">
                     <div class="container "> -->
                         <div class="row g-4">
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
-                                    <h3 class="mb-3">Integrity and Transparency</h3>
-                                    <p class="mb-0">We prioritize establishing enduring relationships with our clients, partners, and stakeholders. Our operations are founded on integrity and transparency, ensuring that each project is managed to the highest ethical standards.</p>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front text-center bg-light h-100 p-5">
+                                                <h4 class="mb-3 ">Integrity and Transparency</h4>
+                                            </div>
+                                            <div class="flip-card-back text-center bg-light h-100 p-5">
+                                                <p style="color:#000" class="core-description-paragraph">We prioritize establishing enduring relationships with our clients, partners, and stakeholders. Our operations are founded on integrity and transparency, ensuring that each project is managed to the highest ethical standards.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+
+
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front text-center bg-light h-100 p-5">
+                                                <h4 class="mb-3 ">Expertise and Experience</h4>
+                                            </div>
+                                            <div class="flip-card-back text-center bg-light h-100 p-5">
+                                                <p style="color:#000" class="core-description-paragraph">With decades of experience in the construction industry, our team of professionals provides extensive knowledge and expertise for every project. Our thorough understanding of the local market and regulatory landscape allows us to handle complex projects with ease and efficiency.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front text-center bg-light h-100 p-5">
+                                                <h4 class="mb-3 ">Client-Center Approach</h4>
+                                            </div>
+                                            <div class="flip-card-back text-center bg-light h-100 p-5">
+                                                <p style="color:#000" class="core-description-paragraph">Clients are our top priority. We invest time in comprehending their individual needs and objectives, and we customize our services to provide exceptional, and unique solutions. From the beginning to the end of a project, we are committed to turning our clients' ideas into reality.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                       
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front text-center bg-light h-100 p-5">
+                                                <h4 class="mb-3 ">Innovation and Sustainability</h4>
+                                            </div>
+                                            <div class="flip-card-back text-center bg-light h-100 p-5">
+                                                <p style="color:#000" class="core-description-paragraph">In a rapidly evolving industry, we maintain our competitive edge by embracing the latest technologies and sustainable practices. Our dedication to innovation ensures that we deliver state-of-the-art solutions that are not only efficient and forward-thinking but also environmentally responsible.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
-                                    <h3 class="mb-3">Expertise and Experience</h3>
-                                    <p class="mb-0">With decades of experience in the construction industry, our team of professionals provides extensive knowledge and expertise for every project. Our thorough understanding of the local market and regulatory landscape allows us to handle complex projects with ease and efficiency.</p>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front text-center bg-light h-100 p-5">
+                                                <h4 class="mb-3 ">Quality and Excellence</h4>
+                                            </div>
+                                            <div class="flip-card-back text-center bg-light h-100 p-5">
+                                                <p style="color:#000" class="core-description-paragraph">We are devoted to maintaining the highest quality standards in every aspect of our work throughout the entire project life cycle. Our attention to detail and unwavering commitment to excellence ensure the successful completion of each project, surpassing expectations.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
                         
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
-                                    <h3 class="mb-3">Client-Center Approach</h3>
-                                    <p class="mb-0">Clients are our top priority. We invest time in comprehending their individual needs and objectives, and we customize our services to provide exceptional, and unique solutions. From the beginning to the end of a project, we are committed to turning our clients' ideas into reality.</p>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front text-center bg-light h-100 p-5">
+                                                <h4 class="mb-3 ">Collaboration and Teamwork</h4>
+                                            </div>
+                                            <div class="flip-card-back text-center bg-light h-100 p-5">
+                                                <p style="color:#000" class="core-description-paragraph">We believe that the most successful outcomes are achieved through collaboration and teamwork. Our comprehensive approach fosters a cooperative environment in which all stakeholders engage in working collectively toward a shared goal, ensuring the successful completion of each project phase.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
                         
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
-                                    <h3 class="mb-3">Innovation and Sustainability</h3>
-                                    <p class="mb-0">In a rapidly evolving industry, we maintain our competitive edge by embracing the latest technologies and sustainable practices. Our dedication to innovation ensures that we deliver state-of-the-art solutions that are not only efficient and forward-thinking but also environmentally responsible.</p>
-                                </div>
-                            </div>
-                        
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
-                                    <h3 class="mb-3">Quality and Excellence</h3>
-                                    <p class="mb-0">We are devoted to maintaining the highest quality standards in every aspect of our work throughout the entire project life cycle. Our attention to detail and unwavering commitment to excellence ensure the successful completion of each project, surpassing expectations.</p>
-                                </div>
-                            </div>
-                        
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="fact-item text-center bg-light h-100 p-5 hover-clear-text">
-                                    <h3 class="mb-3">Collaboration and Teamwork</h3>
-                                    <p class="mb-0">We believe that the most successful outcomes are achieved through collaboration and teamwork. Our comprehensive approach fosters a cooperative environment in which all stakeholders engage in working collectively toward a shared goal, ensuring the successful completion of each project phase.</p>
-                                </div>
-                            </div>
+                          
                         </div>
                     <!-- </div>
                 </div> -->
-
-
-
-
-
-
             </div>
         </div>
     </div>
@@ -817,16 +958,25 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img">
                         <img class="img-fluid" src="img/sliderimages/49.png" alt="">
                         <img class="img-fluid" src="img/sliderimages/48.jpg" alt="">
                     </div>
+                </div> -->
+
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img-who">
+                        <!-- <img class="img-fluid" src="img/sliderimages/48.jpg" alt=""> -->
+                        <img class="img-fluid " src="img/about.avif" alt="">
+    
+                    </div>
                 </div>
+
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <h4 class="section-title">About Us</h4>
-                    <h1 class="display-5 mb-4">A Creative Company For Your Dream </h1>
-                    <p>Global Nexus Management aims to become the premier partner for construction project management in the United States and globally. The company is dedicated to consistently delivering value and distinction in every project it undertakes. </p>
+                    <h4 class="display-5 mb-4">A Creative Company For Your Dream </h4>
+                    <p class="core-description ">Global Nexus Management aims to become the premier partner for construction project management in the United States and globally. The company is dedicated to consistently delivering value and distinction in every project it undertakes. </p>
                     <!-- <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p> -->
                     <!-- <div class="d-flex align-items-center mb-5">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary" style="width: 120px; height: 120px;">
@@ -851,16 +1001,16 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h4 class="section-title">Services</h4>
-                <h1 class="display-5 mb-4">Focus is Modern Services</h1>
+                <h4 class="display-5 mb-4">Focus is Modern Services</h4>
             </div>
-            <div class="row g-4">
-                <p>We initiate the management process early by concentrating on planning, programming, budgeting, scheduling, and establishing the conceptual project and the entire team for success. After obtaining financing, insurance, and contractual commitments, we supervise the entire project from start to finish and handover to operations. Our team ensures that all desired outcomes of stakeholder groups are predetermined and achieved.</p>
+            <div class="row g-4 "  style="align-items: center; justify-content: center; align-self:center">
+                <p class="core-description-center">We initiate the management process early by concentrating on planning, programming, budgeting, scheduling, and establishing the conceptual project and the entire team for success. After obtaining financing, insurance, and contractual commitments, we supervise the entire project from start to finish and handover to operations. Our team ensures that all desired outcomes of stakeholder groups are predetermined and achieved.</p>
     
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item d-flex position-relative text-center h-100">
                         <img class="bg-img" src="img/service-1.jpg" alt="">
                         <div class="service-text p-5">
-                            <h3 class="mb-3">Front-End Program and Best-Use Planning</h3>
+                            <h5 class="mb-3">Front-End Program and Best-Use Planning</h5>
                         </div>
                     </div>
                 </div>
@@ -868,7 +1018,7 @@
                     <div class="service-item d-flex position-relative text-center h-100">
                         <img class="bg-img" src="img/service-2.jpg" alt="">
                         <div class="service-text p-5">
-                            <h3 class="mb-3">Design and Pre-Construction Management</h3>
+                            <h5 class="mb-3">Design and Pre-Construction Management</h5>
                         </div>
                     </div>
                 </div>
@@ -876,7 +1026,7 @@
                     <div class="service-item d-flex position-relative text-center h-100">
                         <img class="bg-img" src="img/service-3.jpg" alt="">
                         <div class="service-text p-5">
-                            <h3 class="mb-3">Construction and Development Management</h3>
+                            <h5 class="mb-3">Construction and Development Management</h5>
                         </div>
                     </div>
                 </div>
@@ -1133,28 +1283,28 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h4 class="section-title">Reviews</h4>
-                <h1 class="display-5 mb-4">Customers Who Trust Us And Our Services</h1>
+                <h4 class="display-5 mb-4">Customers Who Trust Us And Our Services</h4>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
-                    <p class="fs-5">"Global Nexus Management exceeded our expectations with their professionalism and attention to detail. They completed our residential project on time and within budget. Their team was incredibly knowledgeable, and the final result was stunning!"</p>
-                    <h3>Sarah Al-Maktoum</h3>
-                    <span class="text-primary">Homeowner</span>
+                    <p class="fs-5 core-description-center">"Global Nexus Management exceeded our expectations with their professionalism and attention to detail. They completed our residential project on time and within budget. Their team was incredibly knowledgeable, and the final result was stunning!"</p>
+                    <!-- <h3>Sarah Al-Maktoum</h3>
+                    <span class="text-primary">Homeowner</span> -->
                 </div>
                 <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
-                    <p class="fs-5">"Working with Global Nexus Management on our commercial complex was an absolute pleasure. Their expertise in construction and project management ensured that everything went smoothly, even with tight deadlines."</p>
-                    <h3>Mohammed Al-Nuaimi</h3>
-                    <span class="text-primary">Project Manager, Al-Nuaimi Group</span>
+                    <p class="fs-5 core-description-center">"Working with Global Nexus Management on our commercial complex was an absolute pleasure. Their expertise in construction and project management ensured that everything went smoothly, even with tight deadlines."</p>
+                    <!-- <h3>Mohammed Al-Nuaimi</h3>
+                    <span class="text-primary">Project Manager, Al-Nuaimi Group</span> -->
                 </div>
                 <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">
-                    <p class="fs-5">"From planning to execution, the team at Global Nexus delivered exceptional quality. They were highly responsive to any changes and maintained open communication throughout the process. I highly recommend their services."</p>
-                    <h3>Laila Hassan</h3>
-                    <span class="text-primary">CEO, Horizon Real Estate</span>
+                    <p class="fs-5 core-description-center">"From planning to execution, the team at Global Nexus delivered exceptional quality. They were highly responsive to any changes and maintained open communication throughout the process. I highly recommend their services."</p>
+                    <!-- <h3>Laila Hassan</h3>
+                    <span class="text-primary">CEO, Horizon Real Estate</span> -->
                 </div>
                 <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-4.jpg' alt=''>">
-                    <p class="fs-5">"We partnered with Global Nexus Management for a large-scale industrial project. Their ability to manage resources efficiently and stay ahead of schedule was impressive. We are extremely satisfied with the outcome."</p>
-                    <h3>Omar Ahmed</h3>
-                    <span class="text-primary">Operations Manager, Alpha Construction</span>
+                    <p class="fs-5 core-description-center">"We partnered with Global Nexus Management for a large-scale industrial project. Their ability to manage resources efficiently and stay ahead of schedule was impressive. We are extremely satisfied with the outcome."</p>
+                    <!-- <h3>Omar Ahmed</h3>
+                    <span class="text-primary">Operations Manager, Alpha Construction</span> -->
                 </div>
             </div>      
         </div>
@@ -1163,16 +1313,15 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-body footer mt-3 pt-3 px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Address</h3>
+                    <h3 class="text-light mb-2">Address</h3>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>16755 Von Karman Ave Suite 200B
                         Irvine,CA, 92606
                         </p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>714-391-0712</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>541-790-1662</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>714-880-4567</p>
 
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>inquires@gnmusa.com</p>
 
@@ -1186,14 +1335,14 @@
                 </div>
         
                    <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Quick Links</h3>
+                    <h3 class="text-light mb-2">Quick Links</h3>
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="service.html">Services</a>
                     <a class="btn btn-link" href="project.html">Projects</a>
                 </div>
                 <div class="col-lg-6 col-md-6">
-                    <h3 class="text-light mb-4">Location</h3>
+                    <h3 class="text-light mb-2">Location</h3>
                     <div class="container-xxl px-0 wow fadeIn" data-wow-delay="0.1s">
                         <iframe class="w-100 mb-n2" style="height: 200px; width: 350px;"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.4889263304553!2d-117.83917192401276!3d33.69629537329303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdea1f0de207d%3A0x636a6064474fa651!2s16755%20Von%20Karman%20Ave%2C%20Irvine%2C%20CA%2092606%2C%20USA!5e0!3m2!1sen!2seg!4v1725125678478!5m2!1sen!2seg" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -1202,13 +1351,13 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid copyright">
+        <div class="container-fluid copyright " style="background-color: #de9b41;">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" style="color: white;">
                         &copy; <a href="#">Global Nexus Management </a>, All Right Reserved.
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
+                    <div class="col-md-6 text-center text-md-end" style="color: white;">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed & Developed By <a href="https://kemetts.com/">Kemet Technologies</a>
                     </div>

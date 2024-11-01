@@ -57,7 +57,7 @@
         }
         .project-item img {
             width: 100%;
-            height: auto;
+            height: 100%;
             transition: transform 0.3s ease;
         }
         .project-item:hover img {
@@ -75,7 +75,8 @@
             margin-bottom: 1.5rem;
         }
         .modal-dialog {
-            max-width: 90%;
+            max-width: 60%;
+            max-height: 60%;
         }
         .modal-body {
             display: flex;
@@ -85,10 +86,60 @@
         }
         .modal-body img {
             width: 100%;
-            max-width: 150px;
-            height: auto;
+            max-width: 100%;
+            max-height: 60%;
+            height:60%;
             border-radius: 8px;
         }
+
+/* Make the description text larger and with more line spacing */
+.core-description {
+        font-size: 1.1rem; /* Adjust font size */
+        line-height: 1.4; /* Adjust line height for readability */
+        font-weight: 300; /* Lighten font for elegance */
+    }
+
+    .core-description-center {
+        font-size: 1.1rem; /* Adjust font size */
+        line-height: 1.4; /* Adjust line height for readability */
+        font-weight: 300; /* Lighten font for elegance */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .core-description-paragraph {
+        font-size: 1.1rem; /* Adjust font size */
+        line-height: 1; /* Adjust line height for readability */
+        font-weight: 300; /* Lighten font for elegance */
+    }
+
+        /* Mobile Responsiveness */
+@media (max-width: 576px) {
+    .project-grid {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .project-item {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .modal-dialog {
+        max-width: 95%; /* Slightly wider for small screens */
+    }
+
+    .modal-body img {
+        height: auto; /* Ensure images scale properly */
+    }
+
+    .project-item h4 {
+        font-size: 1rem; /* Increase font size for better readability */
+    }
+
+    .project-item p {
+        font-size: 0.85rem; /* Slightly smaller text for mobile */
+    }
+}
     </style>
 </head>
 
@@ -161,7 +212,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-1 text-white animated slideInDown">Projects</h1>
+            <!-- <h1 class="display-1 text-white animated slideInDown">Projects</h1> -->
             <!-- <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
@@ -183,7 +234,7 @@
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <h4 class="section-title">Projects</h4>
         </div>
-        <div class="row g-4 text-center">
+        <div class="row g-4 core-description text-center ">
             <p>These projects were collective efforts led by the company's leadership and founders. The team's experience grew as a result of these endeavors, which gained global recognition. These operations contributed to the development of our knowledge and enabled the company to offer unique services across various industries</p>
 
         </div>
@@ -193,130 +244,12 @@
 
 
 
-
-
-
-
-
-<!-- Residential & Commercial -->
-    <div class="container-xxl">
-        <div class="container">
-            
-            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-    
-                <!-- <h4 class="section-title">Residential & Commercial</h4> -->
-                <h1 class="display-5 mb-4">Residential & Commercial</h1>
-            </div>
-            <div class="project-grid" id="projectList">
-                <!-- Mina projects -->
-               
-                <div class="project-item show-project">
-                    <img src="./img/MinaProjects/Al Sayyah Residence_.jpg" alt="Project 1" style="height: 250px;">
-                    <h4>Al Sayyah Residence</h4>
-                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
-                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project1Modal">View Images</button>
-                </div>       
-                <!-- Project 2 -->
-                <div class="project-item show-project">
-                    <img src="./img/MinaProjects/ALNEEM Residence , RAK , UAE.jpg" alt="Project 2" style="height: 250px;">
-                    <h4>ALNEEM Residence , RAK , UAE</h4>
-                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
-                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project2Modal">View Images</button>
-                </div>
-
-                <div class="project-item show-project">
-                    <img src="./img/MinaProjects/Burj Damac 3 , Dubai , UAE 2.jpg" alt="Project 4" style="height: 250px;">
-                    <h4>Burj Damac 3 , Dubai , UAE</h4>
-                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
-                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project4Modal">View Images</button>
-                </div>
-                <div class="project-item hide-project">
-                    <img src="./img/MinaProjects/D1 Tower , Dubai , UAE.jpeg" alt="Project 5" style="height: 250px;">
-                    <h4>D1 Tower , Dubai , UAE</h4>
-                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
-                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project5Modal">View Images</button>
-                </div>
-                <div class="project-item hide-project">
-                    <img src="./img/MinaProjects/Jumerah Golf Estate , Dubai , UAE.jpg" alt="Project 8" style="height: 250px;">
-                    <h4>Jumerah Golf Estate , Dubai , UAE</h4>
-                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
-                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project8Modal">View Images</button>
-                </div>
-                <div class="project-item hide-project">
-                    <img src="./img/MinaProjects/RemRam Housing , Dubai Land , Dubai , UAE.webp" alt="Project 10" style="height: 250px;">
-                    <h4>RemRam Housing , Dubai Land , Dubai , UAE</h4>
-                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
-                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project10Modal">View Images</button>
-                </div>
-
-            </div>
-        </div>
-    
-        <!-- Show More / Show Less Button -->
-        <div class="text-center">
-            <button id="toggleBtn" class="btn btn-primary mt-4">Show More</button>
-        </div>
-    </div>
-    
-
-
-
-
-
-<!-- Hospitality -->
-<div class="container-xxl">
-    <div class="container">
-        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <!-- <h4 class="section-title">Hospitality</h4> -->
-            <h1 class="display-5 mb-4">Hospitality</h1>
-        </div>
-        <div class="project-grid" id="projectList">
-            <!-- Mina projects -->
-           
-            <div class="project-item show-project">
-                <img src="./img/MinaProjects/Aloft Hotel , Dubai , UAE.jpg" alt="Project 3" style="height: 250px;">
-                <h4>Aloft Hotel , Dubai , UAE</h4>
-                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project3Modal">View Images</button>
-            </div>
-
-            <div class="project-item show-project">
-                <img src="./img/MinaProjects/Hampton By Hilton , Marjan Island , RAK , UAE.jpg" alt="Project 6" style="height: 250px;">
-                <h4>Hampton By Hilton , Marjan Island , RAK , UAE</h4>
-                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project6Modal">View Images</button>
-            </div>
-
-            <div class="project-item show-project">
-                <img src="./img/MinaProjects/Intercontinetal Resort , Mina Al Arab , RAK, UAE.jpg" alt="Project 7" style="height: 250px;">
-                <h4>Intercontinetal Resort , Mina Al Arab , RAK, UAE</h4>
-                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project7Modal">View Images</button>
-            </div>
-
-            <div class="project-item hide-project">
-                <img src="./img/MinaProjects/Movenpick Resort , Marjan Island , RAK, UAE.png" alt="Project 9" style="height: 250px;">
-                <h4>Movenpick Resort , Marjan Island , RAK, UAE</h4>
-                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project9Modal">View Images</button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Show More / Show Less Button -->
-    <div class="text-center">
-        <button id="toggleBtn1" class="btn btn-primary mt-4">Show More</button>
-    </div>
-</div>
-
-
-
-
-
-
 <!-- Health Care -->
 <div class="container-xxl">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <!-- <h4 class="section-title">Residential & Commercial</h4> -->
-            <h1 class="display-5 mb-4">Health Care</h1>
+            <h4 class="display-5 mb-4">Health Care</h4>
         </div>
         <div class="project-grid" id="projectList">
             <!-- william projects -->
@@ -360,6 +293,48 @@
 
 
 
+<!-- Hospitality -->
+<div class="container-xxl">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <!-- <h4 class="section-title">Hospitality</h4> -->
+            <h4 class="display-5 mb-4">Hospitality</h4>
+        </div>
+        <div class="project-grid" id="projectList">
+            <!-- Mina projects -->
+           
+            <div class="project-item show-project">
+                <img src="./img/MinaProjects/Aloft Hotel , Dubai , UAE.jpg" alt="Project 3" style="height: 250px;">
+                <h4>Aloft Hotel , Dubai , UAE</h4>
+                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project3Modal">View Images</button>
+            </div>
+
+            <div class="project-item show-project">
+                <img src="./img/MinaProjects/Hampton By Hilton , Marjan Island , RAK , UAE.jpg" alt="Project 6" style="height: 250px;">
+                <h4>Hampton By Hilton , Marjan Island , RAK , UAE</h4>
+                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project6Modal">View Images</button>
+            </div>
+
+            <div class="project-item show-project">
+                <img src="./img/MinaProjects/Intercontinetal Resort , Mina Al Arab , RAK, UAE.jpg" alt="Project 7" style="height: 250px;">
+                <h4>Intercontinetal Resort , Mina Al Arab , RAK, UAE</h4>
+                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project7Modal">View Images</button>
+            </div>
+
+            <div class="project-item hide-project">
+                <img src="./img/MinaProjects/Movenpick Resort , Marjan Island , RAK, UAE.png" alt="Project 9" style="height: 250px;">
+                <h4>Movenpick Resort , Marjan Island , RAK, UAE</h4>
+                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project9Modal">View Images</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Show More / Show Less Button -->
+    <div class="text-center">
+        <button id="toggleBtn1" class="btn btn-primary mt-4">Show More</button>
+    </div>
+</div>
 
 
 
@@ -368,7 +343,7 @@
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <!-- <h4 class="section-title">Residential & Commercial</h4> -->
-            <h1 class="display-5 mb-4">Critical Missions</h1>
+            <h4 class="display-5 mb-4">Critical Missions</h4>
         </div>
         <div class="project-grid" id="projectList">
             <!-- william projects -->
@@ -398,102 +373,12 @@
 </div>
 
 
-
-
-<!-- Government Building   -->
-<div class="container-xxl">
-    <div class="container">
-        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <!-- <h4 class="section-title">Residential & Commercial</h4> -->
-            <h1 class="display-5 mb-4">Government Building</h1>
-        </div>
-        <div class="project-grid" id="projectList">
-            <!-- william projects -->
-           
-            <div class="project-item show-project">
-                <img src="./img/WilliamProjects/Washington County Office. Portland. OR.jpg" alt="Project 30" style="height: 250px;">
-                <h4>Washington County Office. Portland. OR</h4>
-                <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
-                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project30Modal">View Images</button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Show More / Show Less Button -->
-    <!-- <div class="text-center">
-        <button id="toggleBtn4" class="btn btn-primary mt-4">Show More</button>
-    </div> -->
-</div>
-
-
-
-
-
-
-<!-- Natural Gas Power Plant  -->
-<div class="container-xxl">
-    <div class="container">
-        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <!-- <h4 class="section-title">Residential & Commercial</h4> -->
-            <h1 class="display-5 mb-4">Natural Gas Power Plant </h1>
-        </div>
-        <div class="project-grid" id="projectList">
-            <!-- william projects -->
-           
-            <div class="project-item">
-                <img src="./img/WilliamProjects/Natural Gas Power Plant. US. PA. Jessup.jpg" alt="Project 26" style="height: 250px;">
-                <h4>Natural Gas Power Plant. US. PA. Jessup</h4>
-                <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
-                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project26Modal">View Images</button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Show More / Show Less Button -->
-    <!-- <div class="text-center">
-        <button id="toggleBtn4" class="btn btn-primary mt-4">Show More</button>
-    </div> -->
-</div>
-
-
-
-
-
-<!-- Nike LeBorn James   -->
-<div class="container-xxl">
-    <div class="container">
-        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <!-- <h4 class="section-title">Residential & Commercial</h4> -->
-            <h1 class="display-5 mb-4">Nike LeBorn James </h1>
-        </div>
-        <div class="project-grid" id="projectList">
-            <!-- william projects -->
-           
-            <div class="project-item">
-                <img src="./img/WilliamProjects/Nike LeBorn James Building. Portland. OR. USA (1).webp" alt="Project 27" style="height: 250px;">
-                <h4>Nike LeBorn James Building. Portland. OR. USA</h4>
-                <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
-                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project27Modal">View Images</button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Show More / Show Less Button -->
-    <!-- <div class="text-center">
-        <button id="toggleBtn4" class="btn btn-primary mt-4">Show More</button>
-    </div> -->
-</div>
-
-
 <!-- Renewable   -->
 <div class="container-xxl">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <!-- <h4 class="section-title">Residential & Commercial</h4> -->
-            <h1 class="display-5 mb-4">Renewable</h1>
+            <h4 class="display-5 mb-4">Renewable</h4>
         </div>
         <div class="project-grid" id="projectList">
             <!-- william projects -->
@@ -515,21 +400,76 @@
 </div>
 
 
-
-
-
-
-
-
-
 <!-- Residential & Commercial -->
+    <div class="container-xxl">
+        <div class="container">
+            
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+    
+                <!-- <h4 class="section-title">Residential & Commercial</h4> -->
+                <h4 class="display-5 mb-4">Residential & Commercial</h4>
+            </div>
+            <div class="project-grid" id="projectList">
+                <!-- Mina projects -->
+               
+                <div class="project-item show-project">
+                    <img src="./img/MinaProjects/Al Sayyah Residence_.jpg" alt="Project 1" style="height: 250px;">
+                    <h4>Al Sayyah Residence</h4>
+                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
+                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project1Modal">View Images</button>
+                </div>       
+                <!-- Project 2 -->
+                <div class="project-item show-project">
+                    <img src="./img/MinaProjects/ALNEEM Residence , RAK , UAE.jpg" alt="Project 2" style="height: 250px;">
+                    <h4>ALNEEM Residence , RAK , UAE</h4>
+                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
+                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project2Modal">View Images</button>
+                </div>
+
+                <div class="project-item show-project">
+                    <img src="./img/MinaProjects/Burj Damac 3 , Dubai , UAE 2.jpg" alt="Project 4" style="height: 250px;">
+                    <h4>Burj Damac 3 , Dubai , UAE</h4>
+                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
+                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project4Modal">View Images</button>
+                </div>
+                <div class="project-item hide-project">
+                    <img src="./img/Mina_s projects list/Residential & Commercial/D1 Tower/D1   4.jpg" alt="Project 5" style="height: 250px;">
+                    <h4>D1 Tower , Dubai , UAE</h4>
+                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
+                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project5Modal">View Images</button>
+                </div>
+                <div class="project-item hide-project">
+                    <img src="./img/MinaProjects/Jumerah Golf Estate , Dubai , UAE.jpg" alt="Project 8" style="height: 250px;">
+                    <h4>Jumerah Golf Estate , Dubai , UAE</h4>
+                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
+                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project8Modal">View Images</button>
+                </div>
+                <div class="project-item hide-project">
+                    <img src="./img/MinaProjects/RemRam Housing , Dubai Land , Dubai , UAE.webp" alt="Project 10" style="height: 250px;">
+                    <h4>RemRam Housing , Dubai Land , Dubai , UAE</h4>
+                    <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
+                    <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project10Modal">View Images</button>
+                </div>
+
+            </div>
+        </div>
+    
+        <!-- Show More / Show Less Button -->
+        <div class="text-center">
+            <button id="toggleBtn" class="btn btn-primary mt-4">Show More</button>
+        </div>
+    </div>
+    
+
+
+<!-- Engineering design -->
 <div class="container-xxl">
     <div class="container">
         
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
 
             <!-- <h4 class="section-title">Residential & Commercial</h4> -->
-            <h1 class="display-5 mb-4">Engineering design Projects</h1>
+            <h4 class="display-5 mb-4">Engineering design Projects</h4>
         </div>
         <div class="project-grid" id="projectList">
            
@@ -622,6 +562,104 @@
 
 
 
+<!-- Government Building   -->
+<div class="container-xxl">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <!-- <h4 class="section-title">Residential & Commercial</h4> -->
+            <h4 class="display-5 mb-4">Government Building</h4>
+        </div>
+        <div class="project-grid" id="projectList">
+            <!-- william projects -->
+           
+            <div class="project-item show-project">
+                <img src="./img/WilliamProjects/Washington County Office. Portland. OR.jpg" alt="Project 30" style="height: 250px;">
+                <h4>Washington County Office. Portland. OR</h4>
+                <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
+                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project30Modal">View Images</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Show More / Show Less Button -->
+    <!-- <div class="text-center">
+        <button id="toggleBtn4" class="btn btn-primary mt-4">Show More</button>
+    </div> -->
+</div>
+
+
+
+
+
+
+<!-- Natural Gas Power Plant  -->
+<div class="container-xxl">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <!-- <h4 class="section-title">Residential & Commercial</h4> -->
+            <h4 class="display-5 mb-4">Natural Gas Power Plant </h4>
+        </div>
+        <div class="project-grid" id="projectList">
+            <!-- william projects -->
+           
+            <div class="project-item">
+                <img src="./img/WilliamProjects/Natural Gas Power Plant. US. PA. Jessup.jpg" alt="Project 26" style="height: 250px;">
+                <h4>Natural Gas Power Plant. US. PA. Jessup</h4>
+                <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
+                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project26Modal">View Images</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Show More / Show Less Button -->
+    <!-- <div class="text-center">
+        <button id="toggleBtn4" class="btn btn-primary mt-4">Show More</button>
+    </div> -->
+</div>
+
+
+
+
+
+<!-- Nike LeBorn James   -->
+<div class="container-xxl">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <!-- <h4 class="section-title">Residential & Commercial</h4> -->
+            <h4 class="display-5 mb-4">Nike LeBorn James </h4>
+        </div>
+        <div class="project-grid" id="projectList">
+            <!-- william projects -->
+           
+            <div class="project-item">
+                <img src="./img/WilliamProjects/Nike LeBorn James Building. Portland. OR. USA (1).webp" alt="Project 27" style="height: 250px;">
+                <h4>Nike LeBorn James Building. Portland. OR. USA</h4>
+                <!-- <p>Short description of the project. A brief introduction to the project’s goals and outcomes.</p> -->
+                <button class="btn btn-primary view-images-btn" data-bs-toggle="modal" data-bs-target="#project27Modal">View Images</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Show More / Show Less Button -->
+    <!-- <div class="text-center">
+        <button id="toggleBtn4" class="btn btn-primary mt-4">Show More</button>
+    </div> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -655,7 +693,8 @@
 <!-- models for projects  -->
   <!-- mina models -->
   <!-- Modal for Project 1 -->
-  <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<!-- Updated Modal for Project 1 -->
+<div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -663,163 +702,434 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 2.jpeg" alt="Image 1">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 3.jpg" alt="Image 2">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 4.jpg" alt="Image 3">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 6.webp" alt="Image 4">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 7.jpg" alt="Image 5">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 8.jpg" alt="Image 6">
+                <p>Al Sayyah residence includes 6 blocks with perfect family amenities covering 32,000 sq. feet. Private landscaped garden offers the residents a wide range of activities like jogging, exercising, swimming, squash, tennis, basketball, football fields and access to fully equipped GYM. Children also have their share of activities with great playing area.
+                    Al Sayyah Residence is an integrated community with spacious apartments and a large retail area covers all residents’ needs
+                    </p>
+                <!-- Bootstrap Carousel for image slider -->
+                <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="5"></button>
+                    </div>
 
-                <!-- Add more images -->
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 2.jpeg" alt="Image 1">
+                        </div>
+                            
+                            <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 3.jpg" alt="Image 2">
+                        </div>
+                            
+                        <div class="carousel-item ">
+                            <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 4.jpg" alt="Image 3">
+                        </div>
+                           
+                            <div class="carousel-item ">
+                             <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 6.webp" alt="Image 4">
+                            </div>
+                             <div class="carousel-item ">
+                             <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 7.jpg" alt="Image 5">
+                            </div>
+                             <div class="carousel-item ">
+                             <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 8.jpg" alt="Image 6">
+                            </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-  <!-- Modal for Project 2 -->
-  <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<!-- Updated Modal for Project 2 -->
+<div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">ALNAEEM Residence , RAK , UAE</h5>
+                <h5 class="modal-title" id="project2ModalLabel">ALNAEEM Residence, RAK, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /ALNAEEM Residence , RAK , UAE.jpg" alt="Image 1">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /Naeem 2.jpg" alt="Image 2">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /Naeem 3.jpg" alt="Image 3">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /Naeem 4.jpg" alt="Image 4">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /naeem 5.jpg" alt="Image 5">
-                <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /naeem 6.jpg" alt="Image 6">
+                <p>Al Naeem Twin Towers 272 Flats  and 3 floors offices and 7 outlets. It includes shaded parking, kids play area and gym for the residents. We are focusing on providing exceptional value to Ras Al Khaimah real estate market, a unique building like the Al Naeem twin towers which is considered one of the landmark luxury projects in RAK .</p>
+                <!-- Bootstrap Carousel for image slider -->
+                <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="5"></button>
+                    </div>
 
-                <!-- Add more images -->
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                
+                        <div class="carousel-item active">
+                        <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /ALNAEEM Residence , RAK , UAE.jpg" alt="Image 1">
+                    </div>
+                        <div class="carousel-item">
+                        <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /Naeem 2.jpg" alt="Image 2">
+                    </div>
+                        
+                        <div class="carousel-item">
+                        <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /Naeem 3.jpg" alt="Image 3">
+                    </div>
+                        <div class="carousel-item">
+                        <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /Naeem 4.jpg" alt="Image 4">
+                    </div>
+                        <div class="carousel-item">
+                        <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /naeem 5.jpg" alt="Image 5">
+                    </div>
+                        <div class="carousel-item">
+                        <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /naeem 6.jpg" alt="Image 6">
+                    </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-  <!-- Modal for Project 3 -->
-  <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<!-- Updated Modal for Project 3 -->
+<div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Aloft Hotel , Dubai , UAE</h5>
+                <h5 class="modal-title" id="project3ModalLabel">Aloft Hotel, Dubai, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft Hotel , Dubai , UAE.jpg" alt="Image 1">
-                <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 2.webp" alt="Image 2">
-                <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 3.jpg" alt="Image 3">
-                <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 4.jpg" alt="Image 4">
-                <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 5.jpg" alt="Image 5">
-                <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 6.jpg" alt="Image 6">
+                <p>Aloft Dubai South is the place to see and be seen. Our boutique 4-star hotel is spacious and tech-savvy with onsite parking, plush bedding, and designer bathroom amenities. Recharge at our well-equipped fitness center, open 24/7, or take a splash in our sparkling outdoor swimming pool. Refuel with freshly prepared grab-and-go snacks from our 24-hour pantry, dine at our affordable international restaurant, or relax with friends over signature cocktails at our W XYZ Bar. Get creative in our versatile meeting rooms, or shake it up outside in our unique Backyard space. Let Aloft Dubai South be your 'home away from home.</p>
+                <!-- Bootstrap Carousel for image slider -->
+                <div id="carouselProject3" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="5"></button>
+                    </div>
 
-                <!-- Add more images -->
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                      
+
+                        <div class="carousel-item active">
+                        <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft Hotel , Dubai , UAE.jpg" alt="Image 1">
+                    </div>
+                        <div class="carousel-item ">
+                        <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 2.webp" alt="Image 2">
+                    </div>
+                        <div class="carousel-item ">
+                        <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 3.jpg" alt="Image 3">
+                    </div>
+                        <div class="carousel-item ">
+                        <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 4.jpg" alt="Image 4">
+                    </div>
+                        <div class="carousel-item ">
+                            <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 5.jpg" alt="Image 5">
+                        </div>
+                            <div class="carousel-item ">
+                            <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 6.jpg" alt="Image 6">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject3" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject3" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-  <!-- Modal for Project 4 -->
-  <div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<!-- Updated Modal for Project 4 -->
+<div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Burj Damac 3 , Dubai , UAE</h5>
+                <h5 class="modal-title" id="project4ModalLabel">Burj Damac 3, Dubai, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/Burj Damac 3 , Dubai , UAE 2.jpg" alt="Image 2">
-                <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/damac 2.jpg" alt="Image 3">
-                <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/damac 3.jpg" alt="Image 4">
-                <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/damac 5.jpg" alt="Image 5">
-                <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/damac 6.jpg" alt="Image 6">
-                <!-- Add more images -->
+                <p>The development of Burj Dammc 3 of 62 floors  offers fully furnished studio, 1, 2, and 3-bedroom suites, meticulously designed to meet the highest standards of luxury living. With every detail carefully arranged, residents can expect convenience and comfort tailored to their specific needs and preferences.</p>
+                <!-- Bootstrap Carousel for image slider -->
+                <div id="carouselProject4" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselProject4" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#carouselProject4" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselProject4" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carouselProject4" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#carouselProject4" data-bs-slide-to="4"></button>
+                    </div>
+
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/Burj Damac 3 , Dubai , UAE 2.jpg" alt="Image 2">
+                        </div>
+                                <div class="carousel-item">
+                                    <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/damac 2.jpg" alt="Image 3">
+                                </div>
+                                    <div class="carousel-item">
+                                        <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/damac 3.jpg" alt="Image 4">
+                                    </div>
+                                        <div class="carousel-item">
+                                            <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/damac 5.jpg" alt="Image 5">
+                                        </div>
+                                            <div class="carousel-item">
+                                                <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/damac 6.jpg" alt="Image 6">
+                                            </div>
+
+                       
+                                            <!-- Add more images -->
+
+
+
+
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject4" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject4" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-  <!-- Modal for Project 5 -->
-  <div class="modal fade" id="project5Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<!-- Updated Modal for Project 5 -->
+<div class="modal fade" id="project5Modal" tabindex="-1" aria-labelledby="project5ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">D1 Tower , Dubai , UAE</h5>
+                <h5 class="modal-title" id="project5ModalLabel">D1 Tower, Dubai, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1    2.jpg" alt="Image 2">
-                <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1   3.webp" alt="Image 3">
-                <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1   4.jpg" alt="Image 4">
-                <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1   7.jfif" alt="Image 5">
-                <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1   8.jfif" alt="Image 6">
-                <!-- Add more images -->
+                <p>D1 Tower is one of the main residential skyscrapers in Culture Village with a height of 284 metres (932 ft). This 78 floor building has 526 units which include studio apartments, one-bedroom apartments, two-bedroom apartments, three-bedroom apartments, four-bedroom apartments, five-bedroom apartments, and six-bedroom penthouses housed on high floors of the building.</p>
+                <!-- Bootstrap Carousel for image slider -->
+                <div id="carouselProject5" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselProject5" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#carouselProject5" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselProject5" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carouselProject5" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#carouselProject5" data-bs-slide-to="4"></button>
+                    </div>
+
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1    2.jpg" alt="Image 2">                       
+                         </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1   3.webp" alt="Image 3">                       
+                         </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1   4.jpg" alt="Image 4">                       
+                         </div>
+                        <!-- <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1   7.jfif" alt="Image 5">                      
+                          </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1   8.jfif" alt="Image 6">
+                        </div> -->
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject5" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject5" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
   <!-- Modal for Project 6 -->
-  <div class="modal fade" id="project6Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<!-- Modal for Project 6 -->
+<div class="modal fade" id="project6Modal" tabindex="-1" aria-labelledby="project6ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Hampton By Hilton , Marjan Island , RAK , UAE</h5>
+                <h5 class="modal-title" id="project6ModalLabel">Hampton By Hilton, Marjan Island, RAK, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton4.jpg" alt="Image 2">
-                <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton 2.jpg" alt="Image 3">
-                <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton 3.jpg" alt="Image 4">
-                <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton 5.jpg" alt="Image 5">
-                <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton 6.jfif" alt="Image 6">
-                <!-- Add more images -->
+                <p>Marjan Island has 524 guest rooms  , offers accommodation with an outdoor swimming pool, free private parking, a fitness centre and a terrace. 1.2 km from Santorini Beach and 8.8 km from Al Hamra Mall, the property features a bar and a private beach area. The accommodation provides a 24-hour front desk, airport transfers, a kids' club and free WiFi.
+
+                    The resort will provide guests with air-conditioned rooms with a desk, a kettle, a minibar, a safety deposit box, a flat-screen TV, a balcony and a private bathroom with a shower. At Hampton By Hilton Marjan Island all rooms are equipped with bed linen and towels.</p>
+                <div id="carouselProject6" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton4.jpg"  alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton 2.jpg"  alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton 3.jpg"  alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton 5.jpg"  alt="Image 4">
+                        </div>
+                        <!-- <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton 6.jfif"  alt="Image 5">
+                        </div> -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject6" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject6" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 
   <!-- Modal for Project 7 -->
-  <div class="modal fade" id="project7Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<!-- Modal for Project 7 -->
+<div class="modal fade" id="project7Modal" tabindex="-1" aria-labelledby="project7ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Intercontinetal Resort , Mina Al Arab , RAK, UAE</h5>
+                <h5 class="modal-title" id="project7ModalLabel">Intercontinental Resort, Mina Al Arab, RAK, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/Mina_s projects list/Hospitality /Intercontinental Resort /intercon 2.jfif" alt="Image 2">
-                <img src="img/Mina_s projects list/Hospitality /Intercontinental Resort /intercon 3.jpg" alt="Image 3">
-                <img src="img/Mina_s projects list/Hospitality /Intercontinental Resort /intercon4.webp" alt="Image 4">
-                <img src="img/Mina_s projects list/Hospitality /Intercontinental Resort /Intercontinetal Resort , Mina Al Arab , RAK, UAE.jpg" alt="Image 5">
-                <!-- Add more images -->
+                <p>Bringing something new to the undiscovered destination of Ras Al Khaimah, the 351-room beachfront escape offers a selection of sea-facing romantic havens, private pool villas, and the exclusive Club InterContinental experience, all that seamlessly fuses modern luxury with enchanting local touches.
+                    Enjoy sea views from every room with spacious balconies and terraces, wake up to the sight of the azure sea from whichever room you are in. Perfect for a morning coffee, relaxing with a book, or sunset cocktails.
+                    </p>
+                <div id="carouselProject7" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Mina_s projects list/Hospitality /Intercontinental Resort /intercon 2.jfif" class="d-block w-100" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Hospitality /Intercontinental Resort /intercon 3.jpg" class="d-block w-100" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Hospitality /Intercontinental Resort /intercon4.webp" class="d-block w-100" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Hospitality /Intercontinental Resort /Intercontinetal Resort , Mina Al Arab , RAK, UAE.jpg" class="d-block w-100" alt="Image 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject7" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject7" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
+
 <!-- Modal for Project 8 -->
-<div class="modal fade" id="project8Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<!-- Modal for Project 8 -->
+<div class="modal fade" id="project8Modal" tabindex="-1" aria-labelledby="project8ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Jumerah Golf Estate , Dubai , UAE</h5>
+                <h5 class="modal-title" id="project8ModalLabel">Jumerah Golf Estate, Dubai, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /Jumerah Golf Estate , Dubai , UAE.jpg" alt="Image 2">
-                <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /JGE 2.png" alt="Image 3">
-                <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /JGE  3.jpg" alt="Image 4">
-                <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /JGE 4.jpg" alt="Image 5">
-                <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /JGE 5.jfif" alt="Image 6">
-                <!-- Add more images -->
+                <p>Set across 1,119 hectares of lush green landscape, Jumeirah Golf Estates is an unrivalled destination offering attractive investment opportunities and world-class amenities. The development currently comprises 16 unique communities, overlooking two of the world’s finest golf courses, Earth and Fire. Each individually designed villa, apartment and townhouse is an ideal home.</p>
+                <div id="carouselProject8" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /Jumerah Golf Estate , Dubai , UAE.jpg" class="d-block w-100" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /JGE 2.png" class="d-block w-100" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /JGE  3.jpg" class="d-block w-100" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /JGE 4.jpg" class="d-block w-100" alt="Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /JGE 5.jfif" class="d-block w-100" alt="Image 5">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject8" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject8" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -827,114 +1137,167 @@
 
 
  <!-- Modal for Project 9 -->
- <div class="modal fade" id="project9Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<!-- Modal for Project 9 -->
+<div class="modal fade" id="project9Modal" tabindex="-1" aria-labelledby="project9ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Movenpick Resort , Marjan Island , RAK, UAE</h5>
+                <h5 class="modal-title" id="project9ModalLabel">Movenpick Resort, Marjan Island, RAK, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/Mina_s projects list/Hospitality /Movenpick /mov 2.webp" alt="Image 2">
-                <img src="img/Mina_s projects list/Hospitality /Movenpick /mov 3.jpg" alt="Image 3">
-                <img src="img/Mina_s projects list/Hospitality /Movenpick /mov4.jpg" alt="Image 4">
-                <img src="img/Mina_s projects list/Hospitality /Movenpick /mov5.jpg" alt="Image 5">
-                <!-- Add more images -->
+                <p>Movenpick  resort is located on Al Marjan Island is a spectacular man-made destination comprising of four coral-shaped islands that open out to the shimmering waters of the Arabian Gulf. Get ready to discover this upscale 5 star resort in Ras Al Khaimah built beside 300m. of white sand beach. Our 418 luxury hotel rooms and suites at Mövenpick Resort Al Marjan Island offer comfort with spectacular sea views from every balcony. Our six specialty bars and restaurants, three outdoor pools, wellness hub with a fully equipped gym and four treatment rooms, water sports, and a year round Kids Club make it an ideal holiday destination. Whatever your pace, in the sea or on land, enjoy an experience fueled environment during your stay at Mövenpick Resort Al Marjan Island.
+                </p>
+                <div id="carouselProject9" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Mina_s projects list/Hospitality /Movenpick /mov 2.webp" class="d-block w-100" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Hospitality /Movenpick /mov 3.jpg" class="d-block w-100" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Hospitality /Movenpick /mov4.jpg" class="d-block w-100" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Hospitality /Movenpick /mov5.jpg" class="d-block w-100" alt="Image 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject9" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject9" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+
 <!-- Modal for Project 10 -->
-<div class="modal fade" id="project10Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<!-- Modal for Project 10 -->
+<div class="modal fade" id="project10Modal" tabindex="-1" aria-labelledby="project10ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">RemRaam Housing , Dubai Land , Dubai , UAE</h5>
+                <h5 class="modal-title" id="project10ModalLabel">RemRaam Housing, Dubai Land, Dubai, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /12213714-0df51o.webp" alt="Image 2">
-                <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /570-aerial-site-final4b-1024x394.jpg" alt="Image 3">
-                <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /b37a1644-9f5f-48f2-88b2-91ca9f52855bremram2-3.jpg" alt="Image 4">
-                <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /comp_image_6520ebbc6b4ea.png" alt="Image 5">
-                <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /Remraam Housing , Dubai Land , Dubai , UAE.webp" alt="Image 6">
-                <!-- Add more images -->
+                <p>Remraam is the residential community in Dubai, UAE. Located in Al Hebiah 5. The Remraam development is located on Emirates Road E611 near D61 Highway. Plans for the development included 198 buildings and make it one of the largest construction sites in the UAE but this was later scaled down. Upon completion it was to include a Community Mall, covered parking, outdoor swimming pools, nurseries, gym, sauna, tennis and basketball courts and a clubhouse.</p>
+                <div id="carouselProject10" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /12213714-0df51o.webp" class="d-block w-100" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /570-aerial-site-final4b-1024x394.jpg" class="d-block w-100" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /b37a1644-9f5f-48f2-88b2-91ca9f52855bremram2-3.jpg" class="d-block w-100" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /comp_image_6520ebbc6b4ea.png" class="d-block w-100" alt="Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /Remraam Housing , Dubai Land , Dubai , UAE.webp" class="d-block w-100" alt="Image 5">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject10" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject10" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
  <!-- end of mina models -->
 
  <!-- william models -->
- <div class="modal fade" id="project21Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+ <div class="modal fade" id="project21Modal" tabindex="-1" aria-labelledby="project21ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">FaceBook Data Center in Denver. USA</h5>
+                <h5 class="modal-title" id="project21ModalLabel">FaceBook Data Center in Denver, USA</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/William_s projects list /Critical Missions Project /Facebook Data Center in CL/FaceBook Data Center in Denver. USA" alt="Image 2">
-                <img src="img/William_s projects list /Critical Missions Project /Facebook Data Center in CL/Facebook Data Center. CL 2017.jpg" alt="Image 3">
-                <img src="img/William_s projects list /Critical Missions Project /Facebook Data Center in CL/Lam Data Center 111.jpg" alt="Image 4">
-                <!-- Add more images -->
-            </div>
-        </div>
-    </div>
-</div>
+                <p >In March 2018, Facebook confirmed its plans to expand its data center operations in Denver. Facebook began constructing Meta's proprietary communications network, which manages the physical infrastructure connecting billions of people worldwide. The construction was completed in January 2019 and is still operating to this day.</p>       
 
-<div class="modal fade" id="project22Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">AIraq. Baghdad. Hospital</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /Iraq. Baghdad. Hospital_.png" alt="Image 2">
-                <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /SHAAB-HOSPITAL-10.jpg" alt="Image 3">
-                <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /WhatsApp-Image-2023-02-28-at-4.52.19-PM.jpeg" alt="Image 4">
-                <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /WhatsApp-Image-2023-12-28-at-5.06.00-PM.jpeg" alt="Image 5">
-                <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /Sha_a Hospital 2019.jpg" alt="Image 6">
-
-                <!-- Add more images -->
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" id="project23Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">RemRaam Housing , Dubai Land , Dubai , UAE</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <img src="img/William_s projects list /Critical Missions Project /Lam Data Center in OR /Lam Data Center.jpg" alt="Image 2">
-                <!-- <img src="img/William_s projects list /Critical Missions Project /Lam Data Center in OR /" alt="Image 3"> -->
-
-                <!-- Add more images -->
+                <div id="carouselProject21" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/William_s projects list /Critical Missions Project /Facebook Data Center in CL/FaceBook Data Center in Denver. USA" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Critical Missions Project /Facebook Data Center in CL/Facebook Data Center. CL 2017.jpg" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Critical Missions Project /Facebook Data Center in CL/Lam Data Center 111.jpg" alt="Image 4">
+                        </div>
+                        <!-- Add more carousel items as needed -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject21" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject21" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<div class="modal fade" id="project24Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<div class="modal fade" id="project22Modal" tabindex="-1" aria-labelledby="project22ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Medical Center. Baghdad. USA</h5>
+                <h5 class="modal-title" id="project22ModalLabel">AIraq, Baghdad Hospital</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/William_s projects list /Health Care Projects /Medical Center /Baghdad Hospital 2006.jpg" alt="Image 2">
-                <img src="img/William_s projects list /Health Care Projects /Medical Center /Pic.PNG" alt="Image 3">
-
-                <!-- Add more images -->
+                <div id="carouselProject22" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /Iraq. Baghdad. Hospital_.png" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /SHAAB-HOSPITAL-10.jpg" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /WhatsApp-Image-2023-02-28-at-4.52.19-PM.jpeg" alt="Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /WhatsApp-Image-2023-12-28-at-5.06.00-PM.jpeg" alt="Image 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /Sha_a Hospital 2019.jpg" alt="Image 6">
+                        </div>
+                        <!-- Add more carousel items as needed -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject22" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject22" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -942,79 +1305,219 @@
 
 
 
-<div class="modal fade" id="project25Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<div class="modal fade" id="project23Modal" tabindex="-1" aria-labelledby="project23ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Medical Clinic in Iraq</h5>
+                <h5 class="modal-title" id="project23ModalLabel">Lam Data Center Oregon. Portland. USA</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/William_s projects list /Health Care Projects /Medical Clinic Pic/Medical Clinc in IRAQ 4.jpg" alt="Image 2">
-                <img src="img/William_s projects list /Health Care Projects /Medical Clinic Pic/Medical Clinic in Iraq.jpg" alt="Image 3">
-                <img src="img/William_s projects list /Health Care Projects /Medical Clinic Pic/Medical Clinic in IRAQ3.jpg" alt="Image 4">
-                <img src="img/William_s projects list /Health Care Projects /Shoaa Medical Complex /shoaa-home.png" alt="Image 4">
-
-                <!-- Add more images -->
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="project26Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Natural Gas Power Plant. US. PA. Jessup</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <img src="img/William_s projects list /Natural Gas Power Plant /CPV St. Charles Dusk_lrg.jpg" alt="Image 2">
-                <img src="img/William_s projects list /Natural Gas Power Plant /Natural Gas Power Plant. US. PA. Jessup.jpg" alt="Image 3">
-                <img src="img/William_s projects list /Natural Gas Power Plant /Natural Gas Powerplant Jessup PA 2016.jpg" alt="Image 4">
-                <img src="img/William_s projects list /Natural Gas Power Plant /splash_fairview-power-plant.jpg" alt="Image 5">
-
-               
-                <!-- Add more images -->
+                <p>In 2019, Google was awarded a $600 million project to expand its data center campus in Oregon, as tech giants and real estate developers rush to build technical systems in preparation for artificial intelligence-fueled growth.
+                    The Dalles, a small city about 80 miles east of Portland, approved Google's application to build a fifth data center at its campus along the Columbia River. This was according to a notice from the city's community development department released this week.
+                    The project aims to expand the complex that opened in 2006 as Google's first corporate-owned data center. The sprawling campus has grown over the years and is now reported to be equal in size to two football fields.
+                    This latest project comes as the once-small data center niche benefits from the demand for computing speed and cloud storage capacity, as well as growth from the artificial intelligence sector.
+                    </p>
+                <div id="carouselProject23" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/William_s projects list /Critical Missions Project /Lam Data Center in OR /Lam Data Center.jpg" alt="Image 2">
+                        </div>
+                        <!-- Add more carousel items as needed -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject23" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject23" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<div class="modal fade" id="project27Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+<div class="modal fade" id="project24Modal" tabindex="-1" aria-labelledby="project24ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Nike LeBorn James Building. Portland. OR. USA</h5>
+                <h5 class="modal-title" id="project24ModalLabel">Medical Center, Baghdad, USA</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/William_s projects list /Nike LeBorn James /15054_00_N680_high300.jpg" alt="Image 2">
-                <img src="img/William_s projects list /Nike LeBorn James /Nike_Innovation_Building_2__native_1600.jpg" alt="Image 3">
-                <!-- <img src="img/William_s projects list /Nike LeBorn James /Nike_Sports_Research_Lab_LeBron_James_Innovation_Center_8_original.webp" alt="Image 4"> -->
-                <img src="img/William_s projects list /Nike LeBorn James /Photo-Jul-27-12-45-10-PM-scaled.jpg" alt="Image 5">
-                <!-- Add more images -->
+                <p> In 2007, the US Army awarded another project under the Reconstruct Iraq Program. The hospital was part of a broader, ambitious effort to provide top-quality medical care for all Iraqis. The Medical Center Hospital was a $200 million contract awarded by the U.S. Army Corps of Engineers. The US Army Corps of Engineers used Iraqi subcontractors, who usually hired local people to do the work.
+                </p>
+                <div id="carouselProject24" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/William_s projects list /Health Care Projects /Medical Center /Baghdad Hospital 2006.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Health Care Projects /Medical Center /Pic.PNG" alt="Image 3">
+                        </div>
+                        <!-- Add more carousel items as needed -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject24" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject24" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="project28Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+
+
+
+<div class="modal fade" id="project25Modal" tabindex="-1" aria-labelledby="project25ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Shoaa Medical Center building. Baghdad. Iraq</h5>
+                <h5 class="modal-title" id="project25ModalLabel">Medical Clinic in Iraq</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/William_s projects list /Health Care Projects /Shoaa Medical Complex /shoaa-home.png" alt="Image 2">
-                <img src="img/William_s projects list /Health Care Projects /Shoaa Medical Complex /Shoaa_building_2-01-1.jpg" alt="Image 3">
-                <!-- Add more images -->
+                <div id="carouselProject25" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/William_s projects list /Health Care Projects /Medical Clinic Pic/Medical Clinc in IRAQ 4.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Health Care Projects /Medical Clinic Pic/Medical Clinic in Iraq.jpg" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Health Care Projects /Medical Clinic Pic/Medical Clinic in IRAQ3.jpg" alt="Image 4">
+                        </div>
+                      
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject25" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject25" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="project26Modal" tabindex="-1" aria-labelledby="project26ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="project26ModalLabel">Natural Gas Power Plant, US, PA, Jessup</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselProject26" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/William_s projects list /Natural Gas Power Plant /CPV St. Charles Dusk_lrg.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Natural Gas Power Plant /Natural Gas Power Plant. US. PA. Jessup.jpg" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Natural Gas Power Plant /Natural Gas Powerplant Jessup PA 2016.jpg" alt="Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Natural Gas Power Plant /splash_fairview-power-plant.jpg" alt="Image 5">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject26" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject26" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="project27Modal" tabindex="-1" aria-labelledby="project27ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="project27ModalLabel">Nike LeBron James Building, Portland, OR, USA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselProject27" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/William_s projects list /Nike LeBorn James /15054_00_N680_high300.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Nike LeBorn James /Nike_Innovation_Building_2__native_1600.jpg" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Nike LeBorn James /Photo-Jul-27-12-45-10-PM-scaled.jpg" alt="Image 5">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject27" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject27" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="project28Modal" tabindex="-1" aria-labelledby="project28ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="project28ModalLabel">Shoaa Medical Center Building, Baghdad, Iraq</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselProject28" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/William_s projects list /Health Care Projects /Shoaa Medical Complex /shoaa-home.png" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Health Care Projects /Shoaa Medical Complex /Shoaa_building_2-01-1.jpg" alt="Image 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject28" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject28" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <div class="modal fade" id="project29Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
@@ -1022,17 +1525,54 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="project1ModalLabel">Solar Project. TX. USA</h5>
+                <p></p>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/11.png" alt="Image 2">
-                <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/12.png" alt="Image 3">
-                <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/14.png" alt="Image 4">
-                <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/15.png" alt="Image 5">
-                <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/16.png" alt="Image 6">
-                <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/18.png" alt="Image 7">
+                <!-- Bootstrap Carousel for image slider -->
+                <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators (optional) -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5"></button>
+                    </div>
 
-                <!-- Add more images -->
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" >
+                        <div class="carousel-item active">
+                            <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/11.png" class="d-block w-100" alt="Image 2" >
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/12.png" class="d-block w-100" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/14.png" class="d-block w-100" alt="Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/15.png" class="d-block w-100" alt="Image 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/16.png" class="d-block w-100" alt="Image 6">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/18.png" class="d-block w-100" alt="Image 7">
+                        </div>
+                    </div>
+
+                    <!-- Controls for sliding through images -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -1044,11 +1584,20 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="project1ModalLabel">Solar Project. TX. USA</h5>
+                <h5 class="modal-title" id="project1ModalLabel">Washington County Office. Portland. OR</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/William_s projects list /Government Building /Washington County OR/washington-county-law-enforcement-center-exterior.jpg" alt="Image 2">
+                Project Location:
+                    Hillsboro, OR</br>
+                    Status:
+                    Completed - Jan 2018</br>
+                    Structure Type:
+                     Government</br>
+                     Scope Of Work: 
+                    This project involved expanding the sheriff’s office by adding six new brace frames to the 2-story building. The project team conducted interior renovations and extensive exterior work while ensuring that critical court and law enforcement operations in the building continued without interruption.
+                    </p>
+                <img src="./img/WilliamProjects/Washington County Office. Portland. OR.jpg" alt="Image 2">
                 <!-- Add more images -->
             </div>
         </div>
@@ -1077,17 +1626,16 @@
     <!-- Project End -->
         
 
-   <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+ <!-- Footer Start -->
+ <div class="container-fluid bg-dark text-body footer mt-3 pt-3 px-0 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
-                <h3 class="text-light mb-4">Address</h3>
+                <h3 class="text-light mb-2">Address</h3>
                 <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>16755 Von Karman Ave Suite 200B
                     Irvine,CA, 92606
                     </p>
-                <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>714-391-0712</p>
-                <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>541-790-1662</p>
+                <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>714-880-4567</p>
 
                 <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>inquires@gnmusa.com</p>
 
@@ -1101,14 +1649,14 @@
             </div>
     
                <div class="col-lg-3 col-md-6">
-                <h3 class="text-light mb-4">Quick Links</h3>
+                <h3 class="text-light mb-2">Quick Links</h3>
                 <a class="btn btn-link" href="about.html">About Us</a>
                 <a class="btn btn-link" href="contact.html">Contact Us</a>
                 <a class="btn btn-link" href="service.html">Services</a>
                 <a class="btn btn-link" href="project.html">Projects</a>
             </div>
             <div class="col-lg-6 col-md-6">
-                <h3 class="text-light mb-4">Location</h3>
+                <h3 class="text-light mb-2">Location</h3>
                 <div class="container-xxl px-0 wow fadeIn" data-wow-delay="0.1s">
                     <iframe class="w-100 mb-n2" style="height: 200px; width: 350px;"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.4889263304553!2d-117.83917192401276!3d33.69629537329303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdea1f0de207d%3A0x636a6064474fa651!2s16755%20Von%20Karman%20Ave%2C%20Irvine%2C%20CA%2092606%2C%20USA!5e0!3m2!1sen!2seg!4v1725125678478!5m2!1sen!2seg" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -1117,13 +1665,13 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid copyright">
+    <div class="container-fluid copyright " style="background-color: #de9b41;">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" style="color: white;">
                     &copy; <a href="#">Global Nexus Management </a>, All Right Reserved.
                 </div>
-                <div class="col-md-6 text-center text-md-end">
+                <div class="col-md-6 text-center text-md-end" style="color: white;">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     Designed & Developed By <a href="https://kemetts.com/">Kemet Technologies</a>
                 </div>

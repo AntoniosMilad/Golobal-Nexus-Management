@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,18 +32,96 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
+    <style>
+        /* Make the description text larger and with more line spacing */
+        .core-description {
+            font-size: 1.1rem;
+            /* Adjust font size */
+            line-height: 1.4;
+            /* Adjust line height for readability */
+            font-weight: 300;
+            /* Lighten font for elegance */
+        }
+
+        .core-description-center {
+            font-size: 1.1rem;
+            /* Adjust font size */
+            line-height: 1.4;
+            /* Adjust line height for readability */
+            font-weight: 300;
+            /* Lighten font for elegance */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .core-description-paragraph {
+            font-size: 1.1rem;
+            /* Adjust font size */
+            line-height: 1;
+            /* Adjust line height for readability */
+            font-weight: 300;
+            /* Lighten font for elegance */
+        }
+
+         /* Enhanced button styles */
+    .careers-btn {
+        background-color: var(--primary); /* Change to desired color */
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        /* border-radius: 5px; */
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    /* Hover and Active Styles */
+    .careers-btn:hover {
+        background-color: var(--primary);
+        transform: scale(1.05);
+    }
+
+    /* Arrow styling with animation */
+    .arrow {
+        font-size: 70px;
+        /* position: absolute; */
+        top: 20px;
+        margin-left: 30px;
+        /* right: -25px; */
+        transform: translateY(-50%);
+        color: var(--primary);
+        animation: bounce 1.5s infinite;
+    }
+   /* Arrow Styling */
+
+
+
+    /* Bounce animation for arrow */
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(-10%);
+        }
+        50% {
+            transform: translateY(-20%);
+        }
+    }
+    </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon" style="width:50px; height: 50px;">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status">
+        </div>
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon"
+            style="width:50px; height: 50px;">
     </div>
     <!-- Spinner End -->
 
 
-   <!-- Topbar Start -->
+    <!-- Topbar Start -->
     <!-- <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
@@ -68,7 +148,8 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
             <img class="me-3" src="img/icons/icon-1.png" style="width:220px; height: 100px; " alt="Icon">
         </a>
@@ -100,9 +181,9 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid page-header-contact py-5  wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-1 text-white animated slideInDown">Contact Us</h1>
+            <h1 class="display-1 text-white animated slideInDown"></h1>
             <!-- <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
@@ -119,77 +200,112 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Contact Us</h4>
-                <h1 class="display-5 mb-4">If You Have Any Query, Please Feel Free Contact Us</h1>
+                <h5 class="display-5 mb-4 ">Please Feel Free to Contact if you have any Inquiries</h5>
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="d-flex flex-column justify-content-between h-100">
                         <div class="bg-light d-flex align-items-center w-100 p-4 mb-4">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-dark" style="width: 55px; height: 55px;">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-dark"
+                                style="width: 55px; height: 55px;">
                                 <i class="fa fa-map-marker-alt text-primary"></i>
                             </div>
                             <div class="ms-4">
-                                <p class="mb-2">Address</p>
-                                <h3 class="mb-0">16755 Von Karman Ave Suite 200B
-                                    Irvine,CA, 92606</h3>
+                                <p class="mb-2 core-description">Address</p>
+                                <h4 class="mb-0 core-description">16755 Von Karman Ave Suite 200B Irvine, CA, 92606</h4>
                             </div>
                         </div>
                         <div class="bg-light d-flex align-items-center w-100 p-4 mb-4">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-dark" style="width: 55px; height: 55px;">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-dark"
+                                style="width: 55px; height: 55px;">
                                 <i class="fa fa-phone-alt text-primary"></i>
                             </div>
                             <div class="ms-4">
-                                <p class="mb-2">Call Us Now</p>
-                                <h3 class="mb-0">714-391-0712</h3>
-                                <h3 class="mb-0">541-790-1662</h3>
+                                <p class="mb-2 core-description">Call Us Now</p>
+                                <h4 class="mb-0 core-description">714-880-4567</h4>
                             </div>
                         </div>
                         <div class="bg-light d-flex align-items-center w-100 p-4">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-dark" style="width: 55px; height: 55px;">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-dark"
+                                style="width: 55px; height: 55px;">
                                 <i class="fa fa-envelope-open text-primary"></i>
                             </div>
                             <div class="ms-4">
-                                <p class="mb-2">Mail Us Now</p>
-                                <h3 class="mb-0">inquires@gnmusa.com</h3>
+                                <p class="mb-2 core-description">Mail Us Now</p>
+                                <h4 class="mb-0 core-description">inquiries@gnmusa.com</h4>
                             </div>
                         </div>
+
+                       <!-- Enhanced Careers Information Button -->
+                    <div class="position-relative d-flex align-items-center">
+                        <button class="btn btn-primary w-50 py-3" onclick="toggleCareerInfo()" >
+                             Careers
+                        </button>
+                            <span class="arrow">&#8637;</span> 
                     </div>
+                    <p id="careerInfo" style="display: none; margin-top: 15px;" >
+                        Contact us at careers@gnmusa.com to know more about our career opportunities.
+                    </p>
                 </div>
+            </div>
+
+
+                <!-- Contact Form Section -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <!-- <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control core-description" id="name" placeholder="Your Name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control core-description" id="email" placeholder="Your Email">
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control core-description" id="subject" placeholder="Subject">
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <textarea class="form-control core-description" placeholder="Leave a message here" id="message"
+                                        style="height: 100px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
+
+                            <!-- Privacy Statement and Consent Checkbox -->
+                            <div class="col-12">
+                                <p class="core-description">
+                                    Global Nexus is committed to protecting and respecting your privacy, and we’ll only
+                                    use your personal information to administer your account and to provide the products
+                                    and services you requested from us. From time to time, we would like to contact you
+                                    about our products and services, as well as other content that may be of interest to
+                                    you. If you consent to us contacting you for this purpose, please tick below to say
+                                    how you would like us to contact you:
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="consent" required>
+                                    <label class="form-check-label core-description" for="consent">
+                                        I agree to receive other communications from Global Nexus.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </div>
@@ -199,70 +315,64 @@
     <!-- Google Map Start -->
     <div class="container-xxl pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
         <iframe class="w-100 mb-n2" style="height: 450px;"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.4889263304553!2d-117.83917192401276!3d33.69629537329303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdea1f0de207d%3A0x636a6064474fa651!2s16755%20Von%20Karman%20Ave%2C%20Irvine%2C%20CA%2092606%2C%20USA!5e0!3m2!1sen!2seg!4v1725125678478!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.4889263304553!2d-117.83917192401276!3d33.69629537329303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdea1f0de207d%3A0x636a6064474fa651!2s16755%20Von%20Karman%20Ave%2C%20Irvine%2C%20CA%2092606%2C%20USA!5e0!3m2!1sen!2seg!4v1725125678478!5m2!1sen!2seg"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" frameborder="0" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
     </div>
 
     <!-- Google Map End -->
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-body footer mt-3 pt-3 px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Address</h3>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>16755 Von Karman Ave Suite 200B
+                    <h3 class="text-light mb-2">Address</h3>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>16755 Von Karman Ave Suite
+                        200B
                         Irvine,CA, 92606
-                        </p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>714-391-0712</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>541-790-1662</p>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>714-880-4567</p>
 
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>mbotross@gnmusa.com</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>wkinman@gnmusa.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>inquires@gnmusa.com</p>
 
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-               <!-- <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Services</h3>
-                    <a class="btn btn-link" href="">Architecture</a>
-                    <a class="btn btn-link" href="">3D Animation</a>
-                    <a class="btn btn-link" href="">House Planning</a>
-                    <a class="btn btn-link" href="">Interior Design</a>
-                    <a class="btn btn-link" href="">Construction</a>
-                </div> -->
-                   <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Quick Links</h3>
+
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-2">Quick Links</h3>
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="service.html">Services</a>
-                    <a class="btn btn-link" href="work.html">Work</a>
-                    <!-- <a class="btn btn-link" href="team.html">Our Team</a> -->
+                    <a class="btn btn-link" href="project.html">Projects</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <!-- <h3 class="text-light mb-4">Newsletter</h3>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div> -->
+                <!-- <div class="col-lg-6 col-md-6">
+                <h3 class="text-light mb-2">Location</h3>
+                <div class="container-xxl px-0 wow fadeIn" data-wow-delay="0.1s">
+                    <iframe class="w-100 mb-n2" style="height: 200px; width: 350px;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.4889263304553!2d-117.83917192401276!3d33.69629537329303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdea1f0de207d%3A0x636a6064474fa651!2s16755%20Von%20Karman%20Ave%2C%20Irvine%2C%20CA%2092606%2C%20USA!5e0!3m2!1sen!2seg!4v1725125678478!5m2!1sen!2seg" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
+            </div> -->
             </div>
         </div>
-        <div class="container-fluid copyright">
+        <div class="container-fluid copyright " style="background-color: #de9b41;">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" style="color: white;">
                         &copy; <a href="#">Global Nexus Management </a>, All Right Reserved.
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
+                    <div class="col-md-6 text-center text-md-end" style="color: white;">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://kemetts.com/">Kemet Technologies</a>
+                        Designed & Developed By <a href="https://kemetts.com/">Kemet Technologies</a>
                     </div>
                 </div>
             </div>
@@ -289,6 +399,13 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        function toggleCareerInfo() {
+            const careerInfo = document.getElementById("careerInfo");
+            careerInfo.style.display = careerInfo.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </body>
 
 </html>
