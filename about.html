@@ -219,6 +219,9 @@
             transition: transform 0.5s ease;
             /* Smooth transition for the image */
             transform: translateX(30%);
+            border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+
         }
 
         /* Initially hide the vision content */
@@ -242,6 +245,9 @@
         .image-container:hover~.vision-content {
             opacity: 1;
             /* Full visibility on hover */
+            border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+
         }
 
         /* Center the image initially */
@@ -250,12 +256,18 @@
             /* Centering by using block display */
             max-width: 100%;
             /* Ensure the image is responsive */
+            border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+
         }
 
         /* Hover effect for image */
         .image-container:hover {
             transform: translateX(50%);
             /* Move image to the right */
+            border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+
         }
 
         /* Optional: Style for the vision content */
@@ -306,6 +318,8 @@
             .image-container {
                 display: none;
                 /* Hide the image container on small screens */
+                border-radius: 10px;
+
             }
 
             .vision-content {
@@ -330,6 +344,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         /* Hide the bio by default */
@@ -358,6 +374,8 @@
             /* Box shadow */
             z-index: 10;
             /* Stack above other elements */
+            border-radius: 10px;
+
         }
 
         /* Bio for the right side */
@@ -388,6 +406,8 @@
         .founder-container:hover .founder-bio {
             display: block;
             /* Show bio on hover */
+            border-radius: 10px;
+
         }
 
         /* Optional: Styling for the bio */
@@ -418,11 +438,14 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
             /* Black with opacity for the overlay */
+            border-radius: 10px;
 
 
         }
 
         .modal-content {
+            border-radius: 10px;
+
             background-color: #fefefe;
             margin: 10% auto;
             /* Centered with some margin from the top */
@@ -440,6 +463,8 @@
         }
 
         .modal-body {
+            border-radius: 10px;
+
             display: flex;
             align-items: flex-start;
             /* Align items at the start */
@@ -450,12 +475,17 @@
             /* Prevent image container from growing */
             margin-right: 20px;
             /* Space between image and text */
+            border-radius: 10px;
+       
+
         }
 
         .modal-image {
             max-width: 150px;
             /* Set a maximum width for the image */
             height: auto;
+            border-radius: 10px;
+
             /* Maintain aspect ratio */
             /* border-radius: 8px; */
             /* Optional: add rounded corners */
@@ -480,6 +510,17 @@
             cursor: pointer;
         }
 
+        .team-item{
+            border-radius: 10px; 
+
+        }
+
+        .team-item:hover+.founder-bio {
+                display: block;
+                border-radius: 10px;
+
+                /* Show the bio when hovering over the team-item */
+            }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -498,6 +539,8 @@
             .modal-image-container {
                 margin: 0 auto 20px auto;
                 /* Center image on smaller screens */
+                border-radius: 10px;
+
             }
         }
 
@@ -522,8 +565,12 @@
             /* Show bio when hovering on the team-item */
             .team-item:hover+.founder-bio {
                 display: block;
+                border-top-left-radius: 10px;
+border-top-right-radius: 10px;
                 /* Show the bio when hovering over the team-item */
             }
+
+           
 
             /* Adjust bio left/right based on mobile view */
             .bio-left {
@@ -543,6 +590,8 @@
 
         /* Image styling */
         .team-item img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
             border: 1px solid #ddd;
             /* Image border */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -665,6 +714,7 @@
     position: relative;
     height: 100%;
     min-height: 300px;
+    border-radius: 10px;
 
 }
 
@@ -673,6 +723,7 @@
     width: 70%;
     height: 80%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .about-img-who img:last-child {
@@ -688,6 +739,7 @@
     left: 20%;
     border: 5px solid var(--primary);
     z-index: -1;
+    border-radius: 10px;
 }
 
 
@@ -847,7 +899,7 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header  py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid page-header-about  py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <!-- <h1 class="display-1 text-white animated slideInDown">About Us</h1> -->
             <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -863,20 +915,20 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
+    <div class="container-xxl py-5" >
+        <div class="container" >
             <div class="row g-5 ">
                
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img-who">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" >
+                    <div class="about-img-who" >
                         <!-- <img class="img-fluid" src="img/sliderimages/48.jpg" alt=""> -->
-                        <img class="img-fluid " src="img/about.avif" alt="">
+                        <img class="img-fluid " src="img/about.avif" alt="" style="border-radius: 10px;">
 
                     </div>
                 </div>
                 
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" >
-                    <h5 class="section-title">About US</h5>
+                    <!-- <h5 class="section-title">About US</h5> -->
 
                     <h4 class="display-5 mb-4" style="font-weight: lighter;">Who We Are</h4>
                     <p class="core-description-paragraph" style="line-height: 1.6;">Global Nexus Management aims to become the premier partner for construction project management in
@@ -954,12 +1006,13 @@
             <div class="row g-0 team-items justify-content-center">
 
 
-                <div class="col-lg-3 col-md-3 founder-container" onclick="openModal('williambioModal')">
-                    <div class="team-item position-relative">
+                <div class="col-lg-3 col-md-3 founder-container" onclick="openModal('williambioModal')" >
+                    <div class="team-item position-relative" style=" border-top-right-radius: 10px;
+            border-top-right-radius: 10px;">
                         <div class="position-relative">
                             <img class="img-fluid" src="img/PersonalPhotos1/William Kinman .jpg" alt="" style="height: 300px; width:350px;">
                         </div>
-                        <div class="bg-light text-center p-4">
+                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">William Kinman</h3>
                             <span class="text-primary">Chief Executive Officer</span>
                         </div>
@@ -999,12 +1052,13 @@
 
 <!-- fonder 2 -->
                 <div class="col-lg-3 col-md-3 founder-container" onclick="openModal('minabioModal')">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
+                    <div class="team-item position-relative" style=" border-top-right-radius: 10px;
+            border-top-right-radius: 10px;">
+                        <div class="position-relative" >
                             <img class="img-fluid" src="img/PersonalPhotos1/Mina Botross .jpg" alt="mina"
-                                style="height: 300px; width:350px;">
+                                style="height: 300px; width:350px;" >
                         </div>
-                        <div class="bg-light text-center p-4">
+                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Mina Botross</h3>
                             <span class="text-primary">President</span>
                         </div>
@@ -1041,7 +1095,7 @@
         <a href="leadership.html" class="btn btn-primary leadership-btn">
             See Leadership
         </a>
-        <span class="arrow">&#8637;</span>  <!-- Arrow symbol outside the button -->
+        <!-- <span class="arrow">&#8637;</span>   -->
     </div>
 
 
@@ -1054,9 +1108,9 @@
         <div class="container">
             <div class="text-center mx-auto mb-1 wow fadeInUp" style="max-width: 600px;">
                 <h4 class="display-5  animate-in">Vision</h4>
-                <div class="arrow-container">
+                <!-- <div class="arrow-container">
                     <span class="arrow">&#8623;</span>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -1067,7 +1121,7 @@
             <div class="row  justify-content-center">
                 <div class="migrating-shape"></div>
 
-                <div class="col-lg-6 image-container has-animation">
+                <div class="col-lg-6 image-container has-animation" style="height: 400px; border-radius: 10px;">
                     <img src="img/vision.jpeg" alt="Vision Image" class="img-fluid animate-in"
                         style="max-width: 100%; height: 100%;">
                 </div>
@@ -1094,108 +1148,109 @@
         <div class="container">
             <div class="text-center mx-auto mb-1 wow fadeInUp" style="max-width: 600px;">
                 <h4 class="display-5  animate-in">Mission</h4>
-                <div class="arrow-container">
+                <!-- <div class="arrow-container">
                     <span class="arrow">&#8623;</span>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 
-    <!-- Mission Start -->
-    <div class="container-xxl ">
-        <div class="container">
-            <div class="row " style="justify-content: center;">
-                <!-- Mission Image on the Left -->
-                <div class="col-lg-6 wow fadeInUp " data-wow-delay="0.1s">
-                    <img src="img/mission.jpeg" alt="Mission Image" class="img-fluid"
-                        style="max-width: 100%; height: 100%;">
-                </div>
+   <!-- Mission Start -->
+<div class="container-xxl">
+    <div class="container">
+        <div class="row" style="justify-content: center;">
+            <!-- Mission Image on the Left -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="height: 400px; border-radius: 10px;">
+                <img src="img/mission.jpeg" alt="Mission Image" class="img-fluid"
+                     style="max-width: 100%; height: 100%; object-fit: cover;">
+            </div>
 
-                <!-- Mission Content with Dropdowns -->
-                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+            <!-- Mission Content with Dropdowns -->
+            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s" style="overflow-y: auto; max-height: 500px;">
 
-                    <p class="mb-4 core-description-paragraph" style="line-height: 1.4;">Mission is to provide exceptional construction project management services in the
-                        United States and globally. We maintain a client-centered approach emphasizing integrity,
-                        quality, and collaboration. We are dedicated to:</p>
-                    <div class="row g-4">
+                <p class="mb-4 core-description-paragraph" style="line-height: 1.4;">Mission is to provide exceptional construction project management services in the
+                    United States and globally. We maintain a client-centered approach emphasizing integrity,
+                    quality, and collaboration. We are dedicated to:</p>
+                <div class="row g-4">
 
-                        <!-- Exceeding Client Expectations -->
-                        <div class="col-12">
-                            <div class="d-flex align-items-start" data-bs-toggle="collapse"
-                                data-bs-target="#clientExpectations">
-                                <div class="ms-0">
-                                    <h5 class="core-description-paragraph">Exceeding Client Expectations <span class="dropdown-toggle"></span></h5>
-                                </div>
-                            </div>
-                            <div class="collapseNow" id="clientExpectations">
-                                <p class="mb-0 core-description-paragraph"  >We are committed to completing projects on time and within budget while
-                                    upholding the highest quality standards. Additionally, we provide value engineering,
-                                    ensuring cost-effectiveness.</p>
+                    <!-- Exceeding Client Expectations -->
+                    <div class="col-12">
+                        <div class="d-flex align-items-start" data-bs-toggle="collapse"
+                             data-bs-target="#clientExpectations">
+                            <div class="ms-0">
+                                <h5 class="core-description-paragraph">Exceeding Client Expectations <span class="dropdown-toggle"></span></h5>
                             </div>
                         </div>
-
-                        <!-- Innovative Solutions -->
-                        <div class="col-12">
-                            <div class="d-flex align-items-start" data-bs-toggle="collapse"
-                                data-bs-target="#innovativeSolutions">
-                                <div class="ms-0">
-                                    <h5 class="core-description-paragraph">Innovative Solutions <span class="dropdown-toggle"></span></h5>
-                                </div>
-                            </div>
-                            <div class="collapseNow" id="innovativeSolutions">
-                                <p class="mb-0 core-description-paragraph" >We harness the latest technologies and sustainable practices to improve
-                                    project efficiency and promote environmental responsibility.</p>
-                            </div>
+                        <div class="collapseNow" id="clientExpectations">
+                            <p class="mb-0 core-description-paragraph">We are committed to completing projects on time and within budget while
+                                upholding the highest quality standards. Additionally, we provide value engineering,
+                                ensuring cost-effectiveness.</p>
                         </div>
-
-                        <!-- Expert Team -->
-                        <div class="col-12">
-                            <div class="d-flex align-items-start" data-bs-toggle="collapse"
-                                data-bs-target="#expertTeam">
-                                <div class="ms-0">
-                                    <h5 class="core-description-paragraph">Expert Team <span class="dropdown-toggle"></span></h5>
-                                </div>
-                            </div>
-                            <div class="collapseNow" id="expertTeam">
-                                <p class="mb-0 core-description-paragraph" >Our extensive industry experience and expertise enable us to navigate
-                                    complex construction projects with precision and proficiency.</p>
-                            </div>
-                        </div>
-
-                        <!-- Transparent Communication -->
-                        <div class="col-12">
-                            <div class="d-flex align-items-start" data-bs-toggle="collapse"
-                                data-bs-target="#transparentCommunication">
-                                <div class="ms-0">
-                                    <h5 class="core-description-paragraph">Transparent Communication <span class="dropdown-toggle"></span></h5>
-                                </div>
-                            </div>
-                            <div class="collapseNow" id="transparentCommunication">
-                                <p class="mb-0 core-description-paragraph" >We ensure open and honest communication with clients, stakeholders, and
-                                    partners throughout the project lifecycle.</p>
-                            </div>
-                        </div>
-
-                        <!-- Community Impact -->
-                        <div class="col-12">
-                            <div class="d-flex align-items-start" data-bs-toggle="collapse"
-                                data-bs-target="#communityImpact">
-                                <div class="ms-0">
-                                    <h5 class="core-description-paragraph">Community Impact <span class="dropdown-toggle"></span></h5>
-                                </div>
-                            </div>
-                            <div class="collapseNow" id="communityImpact">
-                                <p class="mb-0 core-description-paragraph" >We contribute to the growth and development of the communities we serve
-                                    by creating sustainable and impactful projects.</p>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <!-- Innovative Solutions -->
+                    <div class="col-12">
+                        <div class="d-flex align-items-start" data-bs-toggle="collapse"
+                             data-bs-target="#innovativeSolutions">
+                            <div class="ms-0">
+                                <h5 class="core-description-paragraph">Innovative Solutions <span class="dropdown-toggle"></span></h5>
+                            </div>
+                        </div>
+                        <div class="collapseNow" id="innovativeSolutions">
+                            <p class="mb-0 core-description-paragraph">We harness the latest technologies and sustainable practices to improve
+                                project efficiency and promote environmental responsibility.</p>
+                        </div>
+                    </div>
+
+                    <!-- Expert Team -->
+                    <div class="col-12">
+                        <div class="d-flex align-items-start" data-bs-toggle="collapse"
+                             data-bs-target="#expertTeam">
+                            <div class="ms-0">
+                                <h5 class="core-description-paragraph">Expert Team <span class="dropdown-toggle"></span></h5>
+                            </div>
+                        </div>
+                        <div class="collapseNow" id="expertTeam">
+                            <p class="mb-0 core-description-paragraph">Our extensive industry experience and expertise enable us to navigate
+                                complex construction projects with precision and proficiency.</p>
+                        </div>
+                    </div>
+
+                    <!-- Transparent Communication -->
+                    <div class="col-12">
+                        <div class="d-flex align-items-start" data-bs-toggle="collapse"
+                             data-bs-target="#transparentCommunication">
+                            <div class="ms-0">
+                                <h5 class="core-description-paragraph">Transparent Communication <span class="dropdown-toggle"></span></h5>
+                            </div>
+                        </div>
+                        <div class="collapseNow" id="transparentCommunication">
+                            <p class="mb-0 core-description-paragraph">We ensure open and honest communication with clients, stakeholders, and
+                                partners throughout the project lifecycle.</p>
+                        </div>
+                    </div>
+
+                    <!-- Community Impact -->
+                    <div class="col-12">
+                        <div class="d-flex align-items-start" data-bs-toggle="collapse"
+                             data-bs-target="#communityImpact">
+                            <div class="ms-0">
+                                <h5 class="core-description-paragraph">Community Impact <span class="dropdown-toggle"></span></h5>
+                            </div>
+                        </div>
+                        <div class="collapseNow" id="communityImpact">
+                            <p class="mb-0 core-description-paragraph">We contribute to the growth and development of the communities we serve
+                                by creating sustainable and impactful projects.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <!-- Mission End -->
+</div>
+<!-- Mission End -->
+
 
 
     <!-- Footer Start -->

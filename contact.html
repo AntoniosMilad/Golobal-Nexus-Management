@@ -95,8 +95,28 @@
     }
    /* Arrow Styling */
 
+/* Icon styling */
+.icon-wrapper {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; /* Make icons circular */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
 
+.contact-item {
+    border-radius: 5%; /* Make icons circular */
+    transition: transform 0.3s ease; /* Smooth scaling on hover for the entire div */
+}
 
+/* Hover effect for the entire contact item */
+.contact-item:hover {
+    transform: scale(1.05); /* Scale up the entire div slightly on hover */
+}
+
+/* Hover effect for the icon */
+.icon-wrapper:hover {
+    transform: scale(1.2); /* Scale up the icon slightly on hover */
+}
     /* Bounce animation for arrow */
     @keyframes bounce {
         0%, 100% {
@@ -181,16 +201,9 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header-contact py-5  wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
+    <div class=" page-header-contact py-5  wow fadeIn" data-wow-delay="0.1s">
+        <div class=" py-5">
             <h1 class="display-1 text-white animated slideInDown"></h1>
-            <!-- <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Contact Us</li>
-                </ol>
-            </nav> -->
         </div>
     </div>
     <!-- Page Header End -->
@@ -205,30 +218,35 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="d-flex flex-column justify-content-between h-100">
-                        <div class="bg-light d-flex align-items-center w-100 p-4 mb-4">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-dark"
-                                style="width: 55px; height: 55px;">
-                                <i class="fa fa-map-marker-alt text-primary"></i>
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="bg-light contact-item d-flex align-items-center w-100 p-4 mb-4">
+                            <div class="icon-wrapper d-flex align-items-center justify-content-center ">
+                                <i class="fa fa-map-marker-alt text-primary" style="font-size: x-large;"></i>
                             </div>
                             <div class="ms-4">
                                 <p class="mb-2 core-description">Address</p>
                                 <h4 class="mb-0 core-description">16755 Von Karman Ave Suite 200B Irvine, CA, 92606</h4>
                             </div>
                         </div>
-                        <div class="bg-light d-flex align-items-center w-100 p-4 mb-4">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-dark"
-                                style="width: 55px; height: 55px;">
-                                <i class="fa fa-phone-alt text-primary"></i>
+                        <!-- Phone Section -->
+                        <div class="bg-light contact-item d-flex align-items-center w-100 p-4 mb-4">
+                            <div class="icon-wrapper d-flex align-items-center justify-content-center ">
+                                <i class="fa fa-phone-alt text-primary" style="font-size: x-large;"></i>
                             </div>
                             <div class="ms-4">
                                 <p class="mb-2 core-description">Call Us Now</p>
                                 <h4 class="mb-0 core-description">714-880-4567</h4>
                             </div>
                         </div>
-                        <div class="bg-light d-flex align-items-center w-100 p-4">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-dark"
-                                style="width: 55px; height: 55px;">
-                                <i class="fa fa-envelope-open text-primary"></i>
+                        <!-- Email Section -->
+                        <div class="bg-light contact-item d-flex align-items-center w-100 p-4">
+                            <div class="icon-wrapper d-flex align-items-center justify-content-center ">
+                                <i class="fa fa-envelope-open text-primary" style="font-size: x-large;"></i>
                             </div>
                             <div class="ms-4">
                                 <p class="mb-2 core-description">Mail Us Now</p>
@@ -241,7 +259,7 @@
                         <button class="btn btn-primary w-50 py-3" onclick="toggleCareerInfo()" >
                              Careers
                         </button>
-                            <span class="arrow">&#8637;</span> 
+                            <!-- <span class="arrow">&#8637;</span>  -->
                     </div>
                     <p id="careerInfo" style="display: none; margin-top: 15px;" >
                         Contact us at careers@gnmusa.com to know more about our career opportunities.

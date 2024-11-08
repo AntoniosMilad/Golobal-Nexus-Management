@@ -239,6 +239,8 @@
             transition: transform 0.5s ease;
             /* Smooth transition for the image */
             transform: translateX(30%);
+            border-radius: 10px;
+
         }
 
         /* Initially hide the vision content */
@@ -258,10 +260,13 @@
 
         }
 
-        /* Show full opacity on hover */
-        .image-container:hover~.vision-content {
+          /* Show full opacity on hover */
+          .image-container:hover~.vision-content {
             opacity: 1;
             /* Full visibility on hover */
+            border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+
         }
 
         /* Center the image initially */
@@ -270,13 +275,22 @@
             /* Centering by using block display */
             max-width: 100%;
             /* Ensure the image is responsive */
+            border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+
         }
 
         /* Hover effect for image */
         .image-container:hover {
             transform: translateX(50%);
             /* Move image to the right */
+            border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+
         }
+
+
+        
 
         /* Optional: Style for the vision content */
         .vision-title,
@@ -350,6 +364,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         /* Hide the bio by default */
@@ -408,6 +424,7 @@
         .founder-container:hover .founder-bio {
             display: block;
             /* Show bio on hover */
+            border-radius: 10px;
         }
 
         /* Optional: Styling for the bio */
@@ -438,11 +455,13 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
             /* Black with opacity for the overlay */
-
+            border-radius: 10px;
 
         }
 
         .modal-content {
+            border-radius: 10px;
+
             background-color: #fefefe;
             margin: 10% auto;
             /* Centered with some margin from the top */
@@ -463,6 +482,8 @@
             display: flex;
             align-items: flex-start;
             /* Align items at the start */
+            border-radius: 10px;
+
         }
 
         .modal-image-container {
@@ -470,6 +491,8 @@
             /* Prevent image container from growing */
             margin-right: 20px;
             /* Space between image and text */
+            border-radius: 10px;
+
         }
 
         .modal-image {
@@ -479,6 +502,8 @@
             /* Maintain aspect ratio */
             /* border-radius: 8px; */
             /* Optional: add rounded corners */
+            border-radius: 10px;
+
         }
 
         .modal-text {
@@ -501,6 +526,19 @@
         }
 
 
+        .team-item{
+            border-radius: 10px; 
+
+        }
+
+        .team-item:hover+.founder-bio {
+                display: block;
+                border-radius: 10px;
+
+                /* Show the bio when hovering over the team-item */
+            }
+
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .modal-content {
@@ -508,6 +546,7 @@
                 /* Make modal width narrower on smaller screens */
                 max-height: 70vh;
                 /* Adjust max height for smaller screens */
+                border-radius: 10px;
             }
 
             .modal-body {
@@ -517,7 +556,10 @@
 
             .modal-image-container {
                 margin: 0 auto 20px auto;
+                border-radius: 10px;
                 /* Center image on smaller screens */
+                border-radius: 10px;
+
             }
         }
 
@@ -542,6 +584,8 @@
             /* Show bio when hovering on the team-item */
             .team-item:hover+.founder-bio {
                 display: block;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
                 /* Show the bio when hovering over the team-item */
             }
 
@@ -563,6 +607,8 @@
 
         /* Image styling */
         .team-item img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
             border: 1px solid #ddd;
             /* Image border */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -791,7 +837,7 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Ban Maliki .jpg" alt=""
                                 style="height: 300px; width:350px;">
                         </div>
-                        <div class="bg-light text-center p-4">
+                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Ban Maliki</h3>
                             <span class="text-primary">Chief Business Development Officer</span>
                         </div>
@@ -844,7 +890,7 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Mariam Tadros .jpg" alt="mina"
                                 style="height: 300px; width:350px;">
                         </div>
-                        <div class="bg-light text-center p-4">
+                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Mariam Tadros</h3>
                             <span class="text-primary">Chief Human Resource Officer</span>
                         </div>
@@ -891,7 +937,7 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Sam Boutros.jpg" alt="mina"
                                 style="height: 300px; width:350px;">
                         </div>
-                        <div class="bg-light text-center p-4">
+                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Sam Botrous</h3>
                             <span class="text-primary">Chief Finance Officer</span>
                         </div>
@@ -967,7 +1013,7 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Adam Richmond.jpg" alt=""
                                 style="height: 300px; width:300px;">
                         </div>
-                        <div class="bg-light text-center p-4">
+                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Adam Richmond</h3>
                             <span class="text-primary">Portfolio management</span>
                             <br /><br />
@@ -985,7 +1031,7 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Christine Elias .jpg" alt=""
                                 style="height: 300px; width:300px;">
                         </div>
-                        <div class="bg-light text-center p-4">
+                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Christine Elias</h3>
                             <span class="text-primary">Director of Architectural Engineer </span>
                             <br /><br />
@@ -1002,7 +1048,7 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Makram Luke .jpg" alt=""
                                 style="height: 300px; width:300px;">
                         </div>
-                        <div class="bg-light text-center p-4">
+                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Makram Luke</h3>
                             <span class="text-primary">Head of BIM and conceptual design</span>
                         </div>
@@ -1018,7 +1064,7 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Joseph Henein.jpg" alt=""
                                 style="height: 300px; width:300px;">
                         </div>
-                        <div class="bg-light text-center p-4">
+                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Joseph Henein</h3>
                             <span class="text-primary">Chief Legal Officer</span>
                             <br /><br />
@@ -1036,7 +1082,7 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Raghad Malallah.jpg" alt=""
                                 style="height: 300px; width:300px;">
                         </div>
-                        <div class="bg-light text-center p-4">
+                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Raghad Malallah</h3>
                             <span class="text-primary">Director of Marketing and Business Development</span>
                         </div>

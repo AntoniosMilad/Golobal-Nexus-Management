@@ -32,10 +32,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
+   
         .container-xxl {
             padding: 5rem 0;
         }
@@ -92,26 +89,25 @@
             border-radius: 8px;
         }
 
-/* Make the description text larger and with more line spacing */
-.core-description {
-        font-size: 1.1rem; /* Adjust font size */
-        line-height: 1.4; /* Adjust line height for readability */
-        font-weight: 300; /* Lighten font for elegance */
-    }
-
-    .core-description-center {
-        font-size: 1.1rem; /* Adjust font size */
-        line-height: 1.4; /* Adjust line height for readability */
-        font-weight: 300; /* Lighten font for elegance */
-        justify-content: center;
-        align-items: center;
-    }
-
-    .core-description-paragraph {
-        font-size: 1.1rem; /* Adjust font size */
-        line-height: 1; /* Adjust line height for readability */
-        font-weight: 300; /* Lighten font for elegance */
-    }
+        .core-description {
+          font-size: 1.3rem; /* Adjust font size */
+          line-height: 1.4; /* Adjust line height for readability */
+          font-weight: 300; /* Lighten font for elegance */
+      }
+  
+      .core-description-center {
+          font-size: 1.1rem; /* Adjust font size */
+          line-height: 1.4; /* Adjust line height for readability */
+          font-weight: 300; /* Lighten font for elegance */
+          justify-content: center;
+          align-items: center;
+      }
+  
+      .core-description-paragraph {
+          font-size: 1.1rem; /* Adjust font size */
+          line-height: 1; /* Adjust line height for readability */
+          font-weight: 300; /* Lighten font for elegance */
+      }
 
         /* Mobile Responsiveness */
 @media (max-width: 576px) {
@@ -140,6 +136,91 @@
         font-size: 0.85rem; /* Slightly smaller text for mobile */
     }
 }
+
+
+
+
+
+/* Images inside the carousel */
+.carousel-item img {
+    width: 100%; /* Ensure the image takes the full width */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 800px; /* Prevent the image from exceeding the maximum height */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio and fits within the defined area */
+}
+
+
+
+/* Modal content with fixed height and scrollable overflow */
+.modal-content {
+    max-height: 700px; /* Fixed modal height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border-radius: 10px; /* Add rounded corners */
+    width: 100%; /* Ensure full width of modal */
+}
+
+/* Carousel inner to vertically center images */
+.carousel-inner {
+    height: 700px; /* Full height of the modal */
+    display: flex;
+
+}
+
+/* Ensure images are contained within the modal's width and height */
+.carousel-item img {
+    max-width: 700px; /* Fit within modal width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 700px; /* Fit within modal height */
+    display: block;
+    margin: auto;
+    object-fit: contain; /* Ensure image does not distort */
+}
+
+
+
+/* Style the carousel control buttons */
+.carousel-control-prev, .carousel-control-next {
+    background-color: #de9b41; /* Blue background color */
+    border-radius: 50%; /* Make the button circular */
+    width: 40px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    display: flex; /* Flexbox to center the icon */
+    align-items: center; /* Vertically center the icon */
+    justify-content: center; /* Horizontally center the icon */
+    border: none; /* Remove any default border */
+    opacity: 0.7; /* Slightly transparent */
+    transition: opacity 0.3s ease; /* Smooth transition on hover */
+    position: absolute; /* Position absolutely inside the carousel */
+    top: 50%; /* Position vertically at the center */
+    transform: translateY(-50%); /* Adjust the positioning so it's centered */
+}
+
+/* Position the 'Previous' button on the far left of the modal */
+.carousel-control-prev {
+    left: 100; /* Align to the left */
+}
+
+/* Position the 'Next' button on the far right of the modal */
+.carousel-control-next {
+    right: 100; /* Align to the right */
+}
+
+/* Hover effect to change opacity */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Style the icons inside the buttons */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    border-radius: 50%; /* Make the icon background circular */
+    width: 40px; /* Icon size */
+    height: 40px; /* Icon size */
+    background-size: 50%; /* Adjust icon size */
+    background-position: center; /* Center the icon */
+}
+
+
+
     </style>
 </head>
 
@@ -234,10 +315,15 @@
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <h4 class="section-title">Projects</h4>
         </div>
-        <div class="row g-4 core-description text-center ">
-            <p>These projects were collective efforts led by the company's leadership and founders. The team's experience grew as a result of these endeavors, which gained global recognition. These operations contributed to the development of our knowledge and enabled the company to offer unique services across various industries</p>
+        <div class="row g-4 justify-content-center" style="text-align: center; justify-content: center; align-items: center;">
+            <p class=" core-description justify-content-center">These projects were collective efforts led by the company's leadership and founders. 
+                The team's experience grew as a result of these endeavors, which gained global recognition. These operations contributed to 
+                the development of our knowledge and enabled the company to offer unique services across various industries</p>
 
         </div>
+
+
+
     </div>
 </div>
 <!-- Service End -->
@@ -249,7 +335,7 @@
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <!-- <h4 class="section-title">Residential & Commercial</h4> -->
-            <h4 class="display-5 mb-4">Health Care</h4>
+            <h4 class="display-5 mb-4">Healthcare</h4>
         </div>
         <div class="project-grid" id="projectList">
             <!-- william projects -->
@@ -695,8 +781,8 @@
   <!-- Modal for Project 1 -->
 <!-- Updated Modal for Project 1 -->
 <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project1ModalLabel">Al Sayyah Residence</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -718,7 +804,8 @@
                     </div>
 
                     <!-- Slides -->
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 1000px; ">
+
                         <div class="carousel-item active">
                             <img src="img/Mina_s projects list/Residential & Commercial/AL Sayyah Residence/sayyah 2.jpeg" alt="Image 1">
                         </div>
@@ -742,16 +829,17 @@
                             </div>
                     </div>
 
-                    <!-- Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                  
                 </div>
+                  <!-- Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -760,8 +848,8 @@
 
 <!-- Updated Modal for Project 2 -->
 <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project2ModalLabel">ALNAEEM Residence, RAK, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -781,7 +869,8 @@
                     </div>
 
                     <!-- Slides -->
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                 
                         <div class="carousel-item active">
                         <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /ALNAEEM Residence , RAK , UAE.jpg" alt="Image 1">
@@ -803,17 +892,16 @@
                         <img src="img/Mina_s projects list/Residential & Commercial/AL NAEEM Twin Tower /naeem 6.jpg" alt="Image 6">
                     </div>
                     </div>
-
-                    <!-- Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                                    <!-- Controls -->
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
             </div>
         </div>
     </div>
@@ -822,8 +910,8 @@
 
 <!-- Updated Modal for Project 3 -->
 <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project3ModalLabel">Aloft Hotel, Dubai, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -843,7 +931,8 @@
                     </div>
 
                     <!-- Slides -->
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                       
 
                         <div class="carousel-item active">
@@ -865,17 +954,16 @@
                             <img src="img/Mina_s projects list/Hospitality /Aloft Hotel /Aloft 6.jpg" alt="Image 6">
                         </div>
                     </div>
-
-                    <!-- Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject3" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject3" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                  <!-- Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -884,8 +972,8 @@
 
 <!-- Updated Modal for Project 4 -->
 <div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project4ModalLabel">Burj Damac 3, Dubai, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -904,7 +992,8 @@
                     </div>
 
                     <!-- Slides -->
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 1000000px; ">
+
                         <div class="carousel-item active">
                             <img src="img/Mina_s projects list/Residential & Commercial/Burj Damac 3/Burj Damac 3 , Dubai , UAE 2.jpg" alt="Image 2">
                         </div>
@@ -928,17 +1017,16 @@
 
 
                     </div>
-
-                    <!-- Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject4" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject4" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                 <!-- Controls -->
+                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject4" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject4" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -946,8 +1034,8 @@
 
 <!-- Updated Modal for Project 5 -->
 <div class="modal fade" id="project5Modal" tabindex="-1" aria-labelledby="project5ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project5ModalLabel">D1 Tower, Dubai, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -966,7 +1054,8 @@
                     </div>
 
                     <!-- Slides -->
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/Mina_s projects list/Residential & Commercial/D1 Tower/D1    2.jpg" alt="Image 2">                       
                          </div>
@@ -984,16 +1073,17 @@
                         </div> -->
                     </div>
 
-                    <!-- Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject5" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject5" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                  
                 </div>
+                  <!-- Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject5" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject5" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1003,8 +1093,8 @@
   <!-- Modal for Project 6 -->
 <!-- Modal for Project 6 -->
 <div class="modal fade" id="project6Modal" tabindex="-1" aria-labelledby="project6ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project6ModalLabel">Hampton By Hilton, Marjan Island, RAK, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1014,7 +1104,8 @@
 
                     The resort will provide guests with air-conditioned rooms with a desk, a kettle, a minibar, a safety deposit box, a flat-screen TV, a balcony and a private bathroom with a shower. At Hampton By Hilton Marjan Island all rooms are equipped with bed linen and towels.</p>
                 <div id="carouselProject6" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton4.jpg"  alt="Image 1">
                         </div>
@@ -1031,15 +1122,16 @@
                             <img src="img/Mina_s projects list/Hospitality /Hampton By Hiltoooo/Hampton 6.jfif"  alt="Image 5">
                         </div> -->
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject6" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject6" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                   
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject6" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject6" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1051,8 +1143,8 @@
   <!-- Modal for Project 7 -->
 <!-- Modal for Project 7 -->
 <div class="modal fade" id="project7Modal" tabindex="-1" aria-labelledby="project7ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project7ModalLabel">Intercontinental Resort, Mina Al Arab, RAK, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1062,7 +1154,8 @@
                     Enjoy sea views from every room with spacious balconies and terraces, wake up to the sight of the azure sea from whichever room you are in. Perfect for a morning coffee, relaxing with a book, or sunset cocktails.
                     </p>
                 <div id="carouselProject7" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/Mina_s projects list/Hospitality /Intercontinental Resort /intercon 2.jfif" class="d-block w-100" alt="Image 1">
                         </div>
@@ -1076,15 +1169,16 @@
                             <img src="img/Mina_s projects list/Hospitality /Intercontinental Resort /Intercontinetal Resort , Mina Al Arab , RAK, UAE.jpg" class="d-block w-100" alt="Image 4">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject7" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject7" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                  
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject7" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject7" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1095,8 +1189,8 @@
 <!-- Modal for Project 8 -->
 <!-- Modal for Project 8 -->
 <div class="modal fade" id="project8Modal" tabindex="-1" aria-labelledby="project8ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project8ModalLabel">Jumerah Golf Estate, Dubai, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1104,7 +1198,8 @@
             <div class="modal-body">
                 <p>Set across 1,119 hectares of lush green landscape, Jumeirah Golf Estates is an unrivalled destination offering attractive investment opportunities and world-class amenities. The development currently comprises 16 unique communities, overlooking two of the world’s finest golf courses, Earth and Fire. Each individually designed villa, apartment and townhouse is an ideal home.</p>
                 <div id="carouselProject8" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /Jumerah Golf Estate , Dubai , UAE.jpg" class="d-block w-100" alt="Image 1">
                         </div>
@@ -1121,15 +1216,15 @@
                             <img src="img/Mina_s projects list/Residential & Commercial/Jumerah Golf Estate /JGE 5.jfif" class="d-block w-100" alt="Image 5">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject8" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject8" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject8" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject8" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1139,8 +1234,8 @@
  <!-- Modal for Project 9 -->
 <!-- Modal for Project 9 -->
 <div class="modal fade" id="project9Modal" tabindex="-1" aria-labelledby="project9ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project9ModalLabel">Movenpick Resort, Marjan Island, RAK, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1149,7 +1244,8 @@
                 <p>Movenpick  resort is located on Al Marjan Island is a spectacular man-made destination comprising of four coral-shaped islands that open out to the shimmering waters of the Arabian Gulf. Get ready to discover this upscale 5 star resort in Ras Al Khaimah built beside 300m. of white sand beach. Our 418 luxury hotel rooms and suites at Mövenpick Resort Al Marjan Island offer comfort with spectacular sea views from every balcony. Our six specialty bars and restaurants, three outdoor pools, wellness hub with a fully equipped gym and four treatment rooms, water sports, and a year round Kids Club make it an ideal holiday destination. Whatever your pace, in the sea or on land, enjoy an experience fueled environment during your stay at Mövenpick Resort Al Marjan Island.
                 </p>
                 <div id="carouselProject9" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/Mina_s projects list/Hospitality /Movenpick /mov 2.webp" class="d-block w-100" alt="Image 1">
                         </div>
@@ -1163,15 +1259,16 @@
                             <img src="img/Mina_s projects list/Hospitality /Movenpick /mov5.jpg" class="d-block w-100" alt="Image 4">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject9" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject9" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                   
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject9" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject9" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1181,8 +1278,8 @@
 <!-- Modal for Project 10 -->
 <!-- Modal for Project 10 -->
 <div class="modal fade" id="project10Modal" tabindex="-1" aria-labelledby="project10ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project10ModalLabel">RemRaam Housing, Dubai Land, Dubai, UAE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1190,7 +1287,8 @@
             <div class="modal-body">
                 <p>Remraam is the residential community in Dubai, UAE. Located in Al Hebiah 5. The Remraam development is located on Emirates Road E611 near D61 Highway. Plans for the development included 198 buildings and make it one of the largest construction sites in the UAE but this was later scaled down. Upon completion it was to include a Community Mall, covered parking, outdoor swimming pools, nurseries, gym, sauna, tennis and basketball courts and a clubhouse.</p>
                 <div id="carouselProject10" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /12213714-0df51o.webp" class="d-block w-100" alt="Image 1">
                         </div>
@@ -1207,15 +1305,16 @@
                             <img src="img/Mina_s projects list/Residential & Commercial/Remraam Housing /Remraam Housing , Dubai Land , Dubai , UAE.webp" class="d-block w-100" alt="Image 5">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject10" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject10" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                  
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject10" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject10" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1225,8 +1324,8 @@
 
  <!-- william models -->
  <div class="modal fade" id="project21Modal" tabindex="-1" aria-labelledby="project21ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project21ModalLabel">FaceBook Data Center in Denver, USA</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1235,7 +1334,8 @@
                 <p >In March 2018, Facebook confirmed its plans to expand its data center operations in Denver. Facebook began constructing Meta's proprietary communications network, which manages the physical infrastructure connecting billions of people worldwide. The construction was completed in January 2019 and is still operating to this day.</p>       
 
                 <div id="carouselProject21" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/William_s projects list /Critical Missions Project /Facebook Data Center in CL/FaceBook Data Center in Denver. USA" alt="Image 2">
                         </div>
@@ -1247,15 +1347,16 @@
                         </div>
                         <!-- Add more carousel items as needed -->
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject21" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject21" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                   
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject21" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject21" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1263,15 +1364,16 @@
 
 
 <div class="modal fade" id="project22Modal" tabindex="-1" aria-labelledby="project22ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project22ModalLabel">AIraq, Baghdad Hospital</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div id="carouselProject22" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/William_s projects list /Health Care Projects /Shaab Hospital /Iraq. Baghdad. Hospital_.png" alt="Image 2">
                         </div>
@@ -1289,15 +1391,16 @@
                         </div>
                         <!-- Add more carousel items as needed -->
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject22" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject22" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                  
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject22" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject22" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1306,8 +1409,8 @@
 
 
 <div class="modal fade" id="project23Modal" tabindex="-1" aria-labelledby="project23ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project23ModalLabel">Lam Data Center Oregon. Portland. USA</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1319,21 +1422,23 @@
                     This latest project comes as the once-small data center niche benefits from the demand for computing speed and cloud storage capacity, as well as growth from the artificial intelligence sector.
                     </p>
                 <div id="carouselProject23" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/William_s projects list /Critical Missions Project /Lam Data Center in OR /Lam Data Center.jpg" alt="Image 2">
                         </div>
                         <!-- Add more carousel items as needed -->
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject23" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject23" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+             
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject23" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject23" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1341,8 +1446,8 @@
 
 
 <div class="modal fade" id="project24Modal" tabindex="-1" aria-labelledby="project24ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project24ModalLabel">Medical Center, Baghdad, USA</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1351,7 +1456,8 @@
                 <p> In 2007, the US Army awarded another project under the Reconstruct Iraq Program. The hospital was part of a broader, ambitious effort to provide top-quality medical care for all Iraqis. The Medical Center Hospital was a $200 million contract awarded by the U.S. Army Corps of Engineers. The US Army Corps of Engineers used Iraqi subcontractors, who usually hired local people to do the work.
                 </p>
                 <div id="carouselProject24" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/William_s projects list /Health Care Projects /Medical Center /Baghdad Hospital 2006.jpg" alt="Image 2">
                         </div>
@@ -1360,15 +1466,16 @@
                         </div>
                         <!-- Add more carousel items as needed -->
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject24" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject24" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+             
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject24" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject24" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1378,15 +1485,16 @@
 
 
 <div class="modal fade" id="project25Modal" tabindex="-1" aria-labelledby="project25ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project25ModalLabel">Medical Clinic in Iraq</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div id="carouselProject25" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/William_s projects list /Health Care Projects /Medical Clinic Pic/Medical Clinc in IRAQ 4.jpg" alt="Image 2">
                         </div>
@@ -1398,15 +1506,15 @@
                         </div>
                       
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject25" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject25" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject25" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject25" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1414,15 +1522,16 @@
 
 
 <div class="modal fade" id="project26Modal" tabindex="-1" aria-labelledby="project26ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project26ModalLabel">Natural Gas Power Plant, US, PA, Jessup</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div id="carouselProject26" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/William_s projects list /Natural Gas Power Plant /CPV St. Charles Dusk_lrg.jpg" alt="Image 2">
                         </div>
@@ -1436,15 +1545,15 @@
                             <img src="img/William_s projects list /Natural Gas Power Plant /splash_fairview-power-plant.jpg" alt="Image 5">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject26" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject26" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject26" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject26" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1453,15 +1562,16 @@
 
 
 <div class="modal fade" id="project27Modal" tabindex="-1" aria-labelledby="project27ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 700px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project27ModalLabel">Nike LeBron James Building, Portland, OR, USA</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div id="carouselProject27" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/William_s projects list /Nike LeBorn James /15054_00_N680_high300.jpg" alt="Image 2">
                         </div>
@@ -1472,15 +1582,16 @@
                             <img src="img/William_s projects list /Nike LeBorn James /Photo-Jul-27-12-45-10-PM-scaled.jpg" alt="Image 5">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject27" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject27" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject27" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject27" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1488,15 +1599,16 @@
 
 
 <div class="modal fade" id="project28Modal" tabindex="-1" aria-labelledby="project28ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project28ModalLabel">Shoaa Medical Center Building, Baghdad, Iraq</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div id="carouselProject28" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                     <div class="carousel-inner" style="max-height: 500px; ">
+
                         <div class="carousel-item active">
                             <img src="img/William_s projects list /Health Care Projects /Shoaa Medical Complex /shoaa-home.png" alt="Image 2">
                         </div>
@@ -1504,15 +1616,16 @@
                             <img src="img/William_s projects list /Health Care Projects /Shoaa Medical Complex /Shoaa_building_2-01-1.jpg" alt="Image 3">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject28" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject28" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject28" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject28" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1521,8 +1634,8 @@
 
 
 <div class="modal fade" id="project29Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project1ModalLabel">Solar Project. TX. USA</h5>
                 <p></p>
@@ -1542,8 +1655,8 @@
                     </div>
 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner" >
-                        <div class="carousel-item active">
+                    <div class="carousel-inner" style="max-height: 500px; ">
+                                                <div class="carousel-item active">
                             <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/11.png" class="d-block w-100" alt="Image 2" >
                         </div>
                         <div class="carousel-item">
@@ -1562,17 +1675,16 @@
                             <img src="img/William_s projects list /Renewable Projects /Solar. TX 2021/18.png" class="d-block w-100" alt="Image 7">
                         </div>
                     </div>
-
-                    <!-- Controls for sliding through images -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                                    <!-- Controls for sliding through images -->
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
             </div>
         </div>
     </div>
@@ -1581,8 +1693,8 @@
 
 
 <div class="modal fade" id="project30Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg" style="max-width: 900px;"> <!-- Set fixed width -->
+        <div class="modal-content" style="max-height: 600px;">
             <div class="modal-header">
                 <h5 class="modal-title" id="project1ModalLabel">Washington County Office. Portland. OR</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

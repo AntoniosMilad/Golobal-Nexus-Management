@@ -57,11 +57,22 @@ h6,
 .btn {
     font-weight: 500;
     transition: .5s;
+
 }
 
 .btn.btn-primary,
 .btn.btn-secondary {
     color: #ffffff;
+
+
+    background-color: #de9b41; /* Button color */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 2; /* Ensure button is above the overlay */
 }
 
 .btn-square {
@@ -96,8 +107,13 @@ h6,
 
 .btn-outline-body:hover {
     color: #ffffff;
-    background: var(--primary);
-    border-color: var(--primary);
+    /* background: var(--primary);
+    border-color: var(--primary); */
+
+
+    background-color: #c58a30;
+    
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 
@@ -234,6 +250,21 @@ h6,
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/sliderimages/41.png) center center no-repeat;
     background-size: cover;
+    height: 30vh; /* Full viewport height */
+    width:100%;
+}
+.page-header-about {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/about.png) center center no-repeat;
+    background-size: cover;
+    height: 30vh; /* Full viewport height */
+    width:100%;
+}
+
+.page-header-services {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/services.png) center center no-repeat;
+    background-size: cover;
+    height: 30vh; /* Full viewport height */
+    width:100%;
 }
 
 .page-header-about-header {
@@ -243,7 +274,13 @@ h6,
 .page-header-contact {
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/contact.png) center center no-repeat;
     background-size: cover;
-    height: auto;
+    height: 50vh; /* Full viewport height */
+    width:100%;
+
+
+
+    display: flex; /* Center content vertically */
+
 }
 .core-description-paragraph {
     font-size: 1.1rem; /* Adjust font size */
@@ -427,8 +464,12 @@ h6,
 }
 
 .team-item .team-social .btn:hover {
-    color: #FFFFFF;
-    background: var(--primary);
+    /* color: #FFFFFF; */
+    /* background: var(--primary); */
+
+    background: #c58a30;
+    
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 
