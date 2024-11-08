@@ -65,52 +65,92 @@
 
 
 
-    /* Card container with fixed height */
-    .flip-card {
-        perspective: 1000px;
-        height: 350px; /* Set fixed height */
-    }
+/* Card container with fixed height */
+.flip-card {
+    perspective: 1000px;
+    height: 350px; /* Set fixed height */
+    transition: transform 0.3s ease-in-out;
+}
 
-    /* Card inner with fixed height */
-    .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%; /* Match height of container */
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-    }
+.flip-card:hover {
+    transform: scale(1.05); /* Slight scaling on hover for a 3D effect */
+}
 
-    /* Flip the card on hover */
-    .flip-card:hover .flip-card-inner {
-        transform: rotateY(180deg);
-    }
+/* Card inner with fixed height */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Match height of container */
+    transition: transform 0.6s ;
+    transform-style: preserve-3d;
+    border-radius: 15px; /* Rounded corners */
+    /* overflow: hidden; */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+}
 
-    /* Front and back of card */
-    .flip-card-front,
-    .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%; /* Match height of inner container */
-        backface-visibility: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        box-sizing: border-box;
-    }
+/* Flip the card on hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
 
-    /* Back of card with rotation */
-    .flip-card-back {
-        transform: rotateY(180deg);
-    }
+/* Front and back of card */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Match height of inner container */
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px; /* Match outer card radius */
 
-    /* Style for content inside cards */
-    .flip-card-front h3,
+}
+
+/* Front of card */
+.flip-card-front {
+    /* background: linear-gradient(135deg, #ffffff, #f8f9fa); Light gradient */
+    color: #333;
+    /* transition: background 0.3s ease; */
+}
+
+.flip-card:hover .flip-card-front {
+    /* background: linear-gradient(135deg, #a2a8d3, #f3f4f7); */
+    /* Color change on hover */
+}
+
+/* Back of card */
+.flip-card-back {
+    background: #000; 
+    /* Vibrant color for back side */
+    /* color: #1d1818; */
+    transform: rotateY(180deg);
+}
+
+/* Title styling on front */
+.flip-card-front h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.flip-card-front h3,
     .flip-card-back p {
         margin: 0;
         font-size: 1rem;
         line-height: 1.5;
+
     }
+
+.flip-card:hover .flip-card-back p {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
 
 
         /* .video-section,
@@ -146,6 +186,132 @@
             height: 100%;
             object-fit: cover;
         } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Set equal height and width for video and images */
+.carousel-content {
+    display: flex;
+    height: 100%;
+}
+
+.video-section, .image-section {
+    height: 100%;
+    flex: 1;
+    padding: 10px; /* Padding between sections */
+}
+
+/* Set video to cover height of the container */
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the space */
+}
+
+/* Adjust image grid layout */
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px; /* Space between images */
+    height: 100%;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures each image fills its cell */
+}
+
+
+
+
+
+
+
+
+
+
+/* Container for service items */
+.service-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px; /* Adds curves to the card edges */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Background image for the service card */
+.bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    border-radius: 20px; /* Match border-radius of the container */
+}
+
+/* Zoom-in effect on background image when hovering */
+.service-item:hover .bg-img {
+    transform: scale(1.1); /* Background image zoom on hover */
+    filter: brightness(0.85); /* Slight darkening for better text contrast */
+}
+
+/* Text content styling */
+.service-text {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for readability */
+    border-radius: 15px; /* Rounded text background */
+    padding: 20px;
+    transition: background 0.3s ease;
+}
+
+.service-item:hover .service-text {
+    background: rgba(255, 255, 255, 0.9); /* Brighter background on hover */
+}
+
+/* Text styling */
+.service-text h5 {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-text h5 {
+    color: var(--primary); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Main container layout */
@@ -427,6 +593,7 @@
     position: relative;
     height: 100%;
     min-height: 300px;
+    border-radius: 10px;
 
 }
 
@@ -435,6 +602,7 @@
     width: 70%;
     height: 80%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .about-img-who img:last-child {
@@ -450,8 +618,46 @@
     left: 20%;
     border: 5px solid var(--primary);
     z-index: -1;
+    border-radius: 10px;
 }
 
+
+/* Apply a border radius and transition for animation */
+.bordered-img {
+    border-radius: 15px; /* Adjust radius as desired */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+/* Hover effect for zoom and shadow */
+.bordered-img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* General styles for smooth animation */
+.carousel-content, .image-section img, .btn {
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image zoom and shadow on hover */
+.image-section img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Video overlay effect on hover */
+.video-section video:hover {
+    opacity: 0.8; /* Dim video slightly on hover */
+}
+
+/* Button color change on hover */
+
+
+/* Text animation */
+.display-4:hover {
+    transform: scale(1.02); /* Slightly enlarge text */
+    color: #555; /* Change color on hover */
+}
 
     </style>
 </head>
@@ -505,16 +711,7 @@
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Services</a>
                 <a href="project.html" class="nav-item nav-link">Projects</a>
-                <!-- <a href="team.html" class="nav-item nav-link">Team Members</a> -->
-                <!-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu border-0 m-0">
-                        <a href="feature.html" class="dropdown-item">Our Features</a>
-                    
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
-   
-                    </div>
-                </div> -->
+    
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
             <!-- <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Appointment</a> -->
@@ -536,10 +733,10 @@
                             <div class="container">
                                 <div class="row justify-content-start">
                                     <div class="col-10 col-lg-8">
-                                        <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; ">
-                                            <h5 style=" color: #000;" class="display-4 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h5>
+                                        <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; margin-bottom: 20px; "  >
+                                            <h5 style=" color: #000;" class="display-4 text-shadow animated slideInDown ">Your vision is our priority, we aim for your satisfaction</h5>
                                           </div>
-                                        <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" style=" color: #000;">Read More</a>
+                                        <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" >Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -548,7 +745,7 @@
                     
                     <!-- Right section: Images beside video -->
                     <div class="right-section image-section" style="opacity: 0.7;">
-                        <div class="image-grid" style=" padding:3px">
+                        <div class="image-grid" style=" padding-left:3px; padding-right: 3px;">
                             <img src="img/sliderimages/1.webp" alt="Project 1" style="height: 100%; width:100%">
                             <img src="img/sliderimages/2.PNG" alt="Project 2" style="height: 100%; width:100%">
                             <img src="img/sliderimages/3.jpg" alt="Project 5" style="height: 100%; width:100%">
@@ -557,19 +754,7 @@
                     </div>
                 </div>
     
-                <!-- Bottom section: Additional images under video -->
-                <!-- <div class="bottom-section image-section" style="opacity: 0.7;">
-                    <div class="bottom-image-grid">
-                        <img src="img/sliderimages/5.jpg" alt="Project 1" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/6.webp" alt="Project 2" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/7.jpg" alt="Project 5" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/8.jpg" alt="Project 6" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/9.jpg" alt="Project 1" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/10.jpg" alt="Project 2" style="height: 100%; width:100%">
-
-
-                    </div>
-                </div> -->
+     
             </div>
 
             <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/sliderimages/12.jpg'>">
@@ -581,10 +766,10 @@
                             <div class="container">
                                 <div class="row justify-content-start">
                                     <div class="col-10 col-lg-8">
-                                        <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; ">
+                                        <div style="background: rgba(255, 255, 255, 0.5);  padding: 10px; margin-bottom: 20px;" >
                                             <h5 style=" color: #000;" class="display-4 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h5>
                                           </div>
-                                        <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" style=" color: #000;">Read More</a>
+                                        <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" >Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -593,7 +778,7 @@
                     
                     <!-- Right section: Images beside video -->
                     <div class="right-section image-section" style="opacity: 0.7;">
-                        <div class="image-grid" style=" padding:2px">
+                        <div class="image-grid" style=" padding-left:3px; padding-right: 3px;">
                             <img src="img/sliderimages/11.jpg" alt="Project 1" style="height: 100%; width:100%">
                             <img src="img/sliderimages/12.jpg" alt="Project 2" style="height: 100%; width:100%">
                             <img src="img/sliderimages/15.jpg" alt="Project 1" style="height: 100%; width:100%">
@@ -602,20 +787,7 @@
                     </div>
                 </div>
     
-                <!-- Bottom section: Additional images under video -->
-                <!-- <div class="bottom-section image-section" style="opacity: 0.7;">
-                    <div class="bottom-image-grid">
-                      
-                        <img src="img/sliderimages/17.jpg" alt="Project 5" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/18.png" alt="Project 6" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/19.webp" alt="Project 1" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/20.jpg" alt="Project 2" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/21.jpg" alt="Project 1" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/44.webp" alt="Project 2" style="height: 100%; width:100%">
-
-
-                    </div>
-                </div> -->
+      
             </div>
 
             <div class="owl-carousel-item position-relative custom-carousel-item" data-dot="<img src='img/sliderimages/32.jpg'>">
@@ -630,7 +802,7 @@
                                         <div style="background: rgba(255, 255, 255, 0.5); padding: 10px; margin-bottom: 20px;">
                                             <h5 style=" color: #000;" class="display-4 text-shadow animated slideInDown">Your vision is our priority, we aim for your satisfaction</h5>
                                           </div>
-                                        <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" style=" color: #000;">Read More</a>
+                                        <a href="about.html" class="btn btn-primary py-3 px-5 animated slideInLeft" >Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -641,7 +813,7 @@
 
                     <!-- Right section: Images beside video -->
                     <div class="right-section image-section" style="opacity: 0.7;">
-                        <div class="image-grid" style=" padding:1px">
+                        <div class="image-grid" style=" padding-left:3px; padding-right: 3px;">
                             <img src="img/sliderimages/32.jpg" alt="Project 1" style="height: 100%; width:100%">
                             <img src="img/sliderimages/34.jpg" alt="Project 2" style="height: 100%; width:100%">
                             <img src="img/sliderimages/35.jpg" alt="Project 5" style="height: 100%; width:100%">
@@ -650,19 +822,7 @@
                     </div>
                 </div>
     
-                <!-- Bottom section: Additional images under video -->
-                <!-- <div class="bottom-section image-section" style="opacity: 0.7;">
-                    <div class="bottom-image-grid">
-                        <img src="img/sliderimages/37.jpg" alt="Project 1" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/38.webp" alt="Project 2" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/39.jpg" alt="Project 5" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/40.jpg" alt="Project 6" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/41.png" alt="Project 1" style="height: 100%; width:100%">
-                        <img src="img/sliderimages/42.jpeg" alt="Project 6" style="height: 100%; width:100%">
-            
 
-                    </div>
-                </div> -->
             </div>
     </div>
 </div>
@@ -725,7 +885,7 @@
 <!-- our value End -->
 
  <!-- About Start -->
-<div class="container-xxl py-5">
+ <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -734,9 +894,6 @@
                 </div>
             </div>
 
-         
-
-            
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <h4 class="section-title">Business Core</h4>
                 <h4 class="display-5 mb-4 justify-content-center" style="font-weight: lighter;">Business Core Values</h4>
@@ -761,8 +918,8 @@
             <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5s" style="justify-content: center; text-align: center;">
                 <!-- <h4 class="section-title justify-content-center">Our Business Core Values</h4> -->
                 <!-- <h1 class="display-5 mb-4">Business Core Values </h1> -->
-                <h3 class=" mb-4">Safety is Our Priority at all times
-                </h3>
+                <h4 class="display-5 mb-4 justify-content-center" style="font-weight: lighter;">Safety is Our Priority at all times
+                </h4>
               
 
                 <!-- <div class="container-xxl py-5">
@@ -965,11 +1122,11 @@
                     </div>
                 </div> -->
 
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img-who">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" >
+                    <div class="about-img-who" >
                         <!-- <img class="img-fluid" src="img/sliderimages/48.jpg" alt=""> -->
-                        <img class="img-fluid " src="img/about.avif" alt="">
-    
+                        <img class="img-fluid " src="img/about.avif" alt="" style="border-radius: 10px;">
+
                     </div>
                 </div>
 
