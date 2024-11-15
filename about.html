@@ -338,11 +338,11 @@
 
         /* Center images and containers */
         .founder-container {
-            cursor: pointer;
+            cursor: pointer !important;
             text-align: center;
             position: relative;
             margin: 20px;
-            display: flex;
+            /* display: flex; */
             justify-content: center;
             align-items: center;
             border-radius: 10px;
@@ -362,7 +362,8 @@
     border-radius: 5px;
     font-size: 14px;
     text-align: center;
-    cursor: pointer;
+    cursor: pointer !important;
+
     border-bottom: 2px solid transparent; /* Initially transparent */
 }
 
@@ -426,9 +427,10 @@
 
         /* Show bio on hover of the founder-container */
         .founder-container:hover .founder-bio {
-            display: block;
+            /* display: block; */
             /* Show bio on hover */
             border-radius: 10px;
+            cursor: pointer !important;
 
         }
 
@@ -529,7 +531,8 @@
         .close:focus {
             color: black;
             text-decoration: none;
-            cursor: pointer;
+            cursor: pointer !important;
+
         }
 
         .team-item{
@@ -675,7 +678,8 @@ border-top-right-radius: 10px;
             color: #252525;
 
             /* Color matching Vision section */
-            cursor: pointer;
+            cursor: pointer !important;
+
             transition: color 0.3s ease;
             position: relative;
         }
@@ -765,6 +769,10 @@ border-top-right-radius: 10px;
 }
 
 
+.hover-pointer:hover {
+    cursor: pointer !important;
+
+}
 
 
 
@@ -849,7 +857,8 @@ border-top-right-radius: 10px;
 
 /* Main button styling */
 .creative-button {
-    cursor: pointer;
+    cursor: pointer !important;
+
     padding: 20px 10px 10px 10px ;
     background-color: var(--primary-color);
     color: #fff;
@@ -911,9 +920,23 @@ border-top-right-radius: 10px;
 
 
 
+.founder-container:hover,
+.team-item:hover,
+.arrow-container:hover {
+    cursor: pointer !important;
+}
 
 
+.show-bio {
+    color: var(--primary); /* Choose a color for the text */
+    text-decoration: underline; /* Add underline */
+    cursor: pointer; /* Make it look clickable */
+}
 
+.show-bio:hover {
+    color: #252525; /* Change color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
 
 
 
@@ -1099,20 +1122,21 @@ border-top-right-radius: 10px;
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h4 class="display-5 mb-4">Founders</h4>
             </div>
-            <div class="row g-0 team-items justify-content-center">
+            <div class="row g-0  justify-content-center">
 
 
-                <div class="col-lg-3 col-md-3 founder-container" onclick="openModal('williambioModal')" >
-                    <div class="team-item position-relative" style=" border-top-right-radius: 10px;
-            border-top-right-radius: 10px;">
-                        <div class="position-relative">
+                <div class="ol-lg-3 col-md-3 founder-container hover-pointer" onclick="openModal('williambioModal')" >
+                    <div class="team-item  hover-pointer" style=" border-top-right-radius: 10px; border-top-right-radius: 10px; cursor: pointer;">
+                        <div class=" hover-pointer">
                             <img class="img-fluid" src="img/PersonalPhotos1/William Kinman .jpg" alt="" style="height: 300px; width:350px;">
                         </div>
-                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
-                            <h3 class="mt-2">William Kinman</h3>
-                            <span class="text-primary">Chief Executive Officer</span>
+                        <div class="bg-light text-center p-4 hover-pointer" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+                            <h3 class="mt-2 hover-pointer">William Kinman</h3>
+                            <span class="text-primary hover-pointer">Chief Executive Officer</span>
                             <!-- <div class="hover-text">Show Bio</div> -->
-
+                            <div class="mt-2 ">
+                                <span class="show-bio " onclick="openModal('williambioModal')">Show Bio</span>
+                            </div>
 
                         </div>
                     </div>
@@ -1150,16 +1174,18 @@ border-top-right-radius: 10px;
 
 
 <!-- fonder 2 -->
-                <div class="col-lg-3 col-md-3 founder-container" onclick="openModal('minabioModal')">
-                    <div class="team-item position-relative" style=" border-top-right-radius: 10px;
-            border-top-right-radius: 10px;">
-                        <div class="position-relative" >
+                <div class="col-lg-3 col-md-3 founder-container hover-pointer" onclick="openModal('minabioModal')">
+                    <div class="team-item position-relative hover-pointer" style=" border-top-right-radius: 10px; border-top-right-radius: 10px; cursor: pointer;">
+                        <div class="position-relative hover-pointer" >
                             <img class="img-fluid" src="img/PersonalPhotos1/Mina Botross .jpg" alt="mina"
                                 style="height: 300px; width:350px;" >
                         </div>
-                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
-                            <h3 class="mt-2">Mina Botross</h3>
-                            <span class="text-primary">President</span>
+                        <div class="bg-light text-center p-4 hover-pointer" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+                            <h3 class="mt-2 hover-pointer">Mina Botross</h3>
+                            <span class="text-primary hover-pointer">President</span>
+                            <div class="mt-2 ">
+                                <span class="show-bio " onclick="openModal('minabioModal')">Show Bio</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1175,15 +1201,21 @@ border-top-right-radius: 10px;
                             </div>
                             <div class="modal-text">
                                 <h3>President - Mina Botross</h3>
-                                <p class="mb-0">In his 17+ years of experience, he has demonstrated strong leadership in
-                                    managing busniess, projects, and relationships. He managed numerous high-end extravagant
-                                    projects, collaborating with thousands of dedicated professionals and tradespeople. His
-                                    expertise lies in project development, problem-solving, and sharing valuable knowledge to
-                                    support the growth of other companies based on best practices and lessons learned. With his
-                                    extensive experience in civil engineering, development, and construction, He excels in
-                                    leadership, developing and creating successful strategies to lead the projects’ goal to
-                                    achievement.</p>
+                                <p class="mb-0">In his 17+ years of experience, he has demonstrated strong leadership in managing business, projects, and relationships.
+                                     He managed numerous high-end extravagant projects, collaborating with thousands of dedicated professionals and tradespeople. 
+                                     His expertise lies in project development, problem-solving, 
+                                     and sharing valuable knowledge to support the growth of other companies based on best practices and lessons learned. 
+                                     With his extensive experience in civil engineering, 
+                                    development, and construction, He excels in leadership, developing and creating successful strategies to lead the projects’ goal to achievement.
+<br/>
+
+                                    Continuing to navigate the ever-changing landscape of the construction industry, he  wants to take a moment to reflect on the company's journey and express his gratitude for your unwavering support.
+                                    <br/>
+                                    At Global Nexus Management, we are  committed to delivering exceptional results, fostering strong relationships, and pushing the boundaries of innovation. Our mission remains steadfast: to build a better future for our clients, employees, and the communities we serve
+                                    </p>
                             </div>
+
+                    
                         </div>
                     </div>
                 </div>

@@ -369,6 +369,19 @@
             overflow: hidden;
         }
 
+
+        .founder-container-team {
+            text-align: center;
+            position: relative;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+
         /* Hide the bio by default */
         .founder-bio {
             display: none;
@@ -756,6 +769,20 @@
             border: 5px solid var(--primary);
             z-index: -1;
         }
+
+
+
+        .show-bio {
+    color: var(--primary); /* Choose a color for the text */
+    text-decoration: underline; /* Add underline */
+    cursor: pointer; /* Make it look clickable */
+}
+
+.show-bio:hover {
+    color: #252525; /* Change color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
     </style>
 
 
@@ -841,6 +868,9 @@
                         <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Ban Maliki</h3>
                             <span class="text-primary">Chief Business Development Officer</span>
+                            <div class="mt-2 ">
+                                <span class="show-bio " onclick="openModal('banbioModal')">Show Bio</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -894,6 +924,10 @@
                         <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Mariam Tadros</h3>
                             <span class="text-primary">Chief Human Resource Officer</span>
+                            <br/> <br/> 
+                            <div class="mt-2 ">
+                                <span class="show-bio " onclick="openModal('mariambioModal')">Show Bio</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -941,6 +975,10 @@
                         <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Sam Botrous</h3>
                             <span class="text-primary">Chief Finance Officer</span>
+                            <br/> <br/> 
+                            <div class="mt-2 ">
+                                <span class="show-bio " onclick="openModal('sambioModal')">Show Bio</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1007,7 +1045,7 @@
             <div class="row g-0 team-items justify-content-center">
 
                 <!-- Team Member 4 -->
-                <div class="col-lg-3 col-md-3 wow fadeInUp founder-container" data-wow-delay="0.3s"
+                <div class="col-lg-3 col-md-3 wow fadeInUp founder-container-team" data-wow-delay="0.3s"
                     style="display: flex; justify-content: center; position: relative;">
                     <div class="team-item position-relative">
                         <div class="position-relative">
@@ -1025,7 +1063,7 @@
 
 
                 <!-- Team Member 5 -->
-                <div class="col-lg-3 col-md-3 wow fadeInUp founder-container" data-wow-delay="0.3s"
+                <div class="col-lg-3 col-md-3 wow fadeInUp founder-container-team" data-wow-delay="0.3s"
                     style="display: flex; justify-content: center; position: relative;">
                     <div class="team-item position-relative">
                         <div class="position-relative">
@@ -1042,7 +1080,7 @@
 
 
                 <!-- Team Member 6 -->
-                <div class="col-lg-3 col-md-3 wow fadeInUp founder-container" data-wow-delay="0.3s"
+                <div class="col-lg-3 col-md-3 wow fadeInUp founder-container-team" data-wow-delay="0.3s"
                     style="display: flex; justify-content: center; position: relative;">
                     <div class="team-item position-relative">
                         <div class="position-relative">
@@ -1067,7 +1105,7 @@
                         </div>
                         <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Joseph Henein</h3>
-                            <span class="text-primary">Chief Legal Counsel</span>
+                            <span class="text-primary">Legal Counsel</span>
                             <br /><br />
                         </div>
                     </div>
@@ -1076,7 +1114,7 @@
 
 
                 <!-- Team Member 8 -->
-                <div class="col-lg-3 col-md-3 wow fadeInUp founder-container" data-wow-delay="0.3s"
+                <div class="col-lg-3 col-md-3 wow fadeInUp founder-container-team" data-wow-delay="0.3s"
                     style="display: flex; justify-content: center; position: relative;">
                     <div class="team-item position-relative">
                         <div class="position-relative">
