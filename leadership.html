@@ -39,26 +39,36 @@
         :root {
             --color--main: var(--primary);
         }
-/* Make the description text larger and with more line spacing */
-.core-description {
-        font-size: 1.1rem; /* Adjust font size */
-        line-height: 1.4; /* Adjust line height for readability */
-        font-weight: 300; /* Lighten font for elegance */
-    }
 
-    .core-description-center {
-        font-size: 1.1rem; /* Adjust font size */
-        line-height: 1.4; /* Adjust line height for readability */
-        font-weight: 300; /* Lighten font for elegance */
-        justify-content: center;
-        align-items: center;
-    }
+        /* Make the description text larger and with more line spacing */
+        .core-description {
+            font-size: 1.1rem;
+            /* Adjust font size */
+            line-height: 1.4;
+            /* Adjust line height for readability */
+            font-weight: 300;
+            /* Lighten font for elegance */
+        }
 
-    .core-description-paragraph {
-        font-size: 1.1rem; /* Adjust font size */
-        line-height: 1; /* Adjust line height for readability */
-        font-weight: 300; /* Lighten font for elegance */
-    }
+        .core-description-center {
+            font-size: 1.1rem;
+            /* Adjust font size */
+            line-height: 1.4;
+            /* Adjust line height for readability */
+            font-weight: 300;
+            /* Lighten font for elegance */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .core-description-paragraph {
+            font-size: 1.1rem;
+            /* Adjust font size */
+            line-height: 1;
+            /* Adjust line height for readability */
+            font-weight: 300;
+            /* Lighten font for elegance */
+        }
 
         .bigger {
             font-size: 60px;
@@ -260,8 +270,8 @@
 
         }
 
-          /* Show full opacity on hover */
-          .image-container:hover~.vision-content {
+        /* Show full opacity on hover */
+        .image-container:hover~.vision-content {
             opacity: 1;
             /* Full visibility on hover */
             border-top-right-radius: 10px;
@@ -290,7 +300,7 @@
         }
 
 
-        
+
 
         /* Optional: Style for the vision content */
         .vision-title,
@@ -540,17 +550,15 @@
         }
 
 
-        .team-item{
-            border-radius: 10px; 
-
+        .team-item {
+            border-radius: 10px !important;
         }
 
         .team-item:hover+.founder-bio {
-                display: block;
-                border-radius: 10px;
-
-                /* Show the bio when hovering over the team-item */
-            }
+            display: block;
+            border-radius: 10px !important;
+            /* Show the bio when hovering over the team-item */
+        }
 
 
         /* Responsive adjustments */
@@ -600,6 +608,7 @@
                 display: block;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
+
                 /* Show the bio when hovering over the team-item */
             }
 
@@ -773,16 +782,20 @@
 
 
         .show-bio {
-    color: var(--primary); /* Choose a color for the text */
-    text-decoration: underline; /* Add underline */
-    cursor: pointer; /* Make it look clickable */
-}
+            color: var(--primary);
+            /* Choose a color for the text */
+            text-decoration: underline;
+            /* Add underline */
+            cursor: pointer;
+            /* Make it look clickable */
+        }
 
-.show-bio:hover {
-    color: #252525; /* Change color on hover */
-    text-decoration: none; /* Remove underline on hover */
-}
-
+        .show-bio:hover {
+            color: #252525;
+            /* Change color on hover */
+            text-decoration: none;
+            /* Remove underline on hover */
+        }
     </style>
 
 
@@ -865,7 +878,8 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Ban Maliki .jpg" alt=""
                                 style="height: 300px; width:350px;">
                         </div>
-                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+                        <div class="bg-light text-center p-4"
+                            style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Ban Maliki</h3>
                             <span class="text-primary">Chief Business Development Officer</span>
                             <!-- <div class="mt-2 ">
@@ -921,10 +935,11 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Mariam Tadros .jpg" alt="mina"
                                 style="height: 300px; width:350px;">
                         </div>
-                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+                        <div class="bg-light text-center p-4"
+                            style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Mariam Tadros</h3>
                             <span class="text-primary">Chief Human Resource Officer</span>
-                            <br/> <br/> 
+                            <br /> <br />
                             <!-- <div class="mt-2 ">
                                 <span class="show-bio " onclick="openModal('mariambioModal')">Show Bio</span>
                             </div> -->
@@ -972,10 +987,11 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Sam Boutros.jpg" alt="mina"
                                 style="height: 300px; width:350px;">
                         </div>
-                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+                        <div class="bg-light text-center p-4"
+                            style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Sam Botrous</h3>
                             <span class="text-primary">Chief Finance Officer</span>
-                            <br/> <br/> 
+                            <br /> <br />
                             <!-- <div class="mt-2 ">
                                 <span class="show-bio " onclick="openModal('sambioModal')">Show Bio</span>
                             </div> -->
@@ -993,19 +1009,22 @@
                             </div>
                             <div class="modal-text">
                                 <h3>Chief Finance Officer - Sam Botrous</h3>
-                                <p class="mb-0">Results-driven financial executive with 25+ years of experience driving growth,
+                                <p class="mb-0">Results-driven financial executive with 25+ years of experience driving
+                                    growth,
                                     optimizing performance, and leading cross-functional teams.
-                                    Sam serves as CFO of Global Nexus Management overseeing financial strategy, planning, and
+                                    Sam serves as CFO of Global Nexus Management overseeing financial strategy,
+                                    planning, and
                                     operations. His expertise spans:
-        
+
                                     - Financial planning and analysis
                                     - Risk management and mitigation
                                     - Mergers and acquisitions
                                     - Strategic partnerships
-        
+
                                     Personal Statement:
-        
-                                    "I'm passionate about driving financial excellence and strategic growth, while fostering a
+
+                                    "I'm passionate about driving financial excellence and strategic growth, while
+                                    fostering a
                                     culture of collaboration and innovation."</p>
                             </div>
                         </div>
@@ -1015,9 +1034,10 @@
 
                 <!-- Centered Leadership Button -->
                 <div class="text-center mb-4">
-                    <button id="teamButton" onclick="toggleTeamMembers()" class="btn btn-primary">Show Team Members</button>
-                                </div>
-    
+                    <button id="teamButton" onclick="toggleTeamMembers()" class="btn btn-primary">Show Team
+                        Members</button>
+                </div>
+
 
 
             </div>
@@ -1037,7 +1057,7 @@
 
     <!-- ordinary team Start -->
     <div id="ordinaryTeam" class="container-xxl py-5" style="display: none;">
-                <div class="container">
+        <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h4 class="section-title">Team Members</h4>
                 <!-- <h1 class="display-5 mb-4">Creative Team For Your Dream </h1> -->
@@ -1046,13 +1066,14 @@
 
                 <!-- Team Member 4 -->
                 <div class="col-lg-3 col-md-3 wow fadeInUp founder-container-team" data-wow-delay="0.3s"
-                style="display: flex; justify-content: center; position: relative;">
-                <div class="team-item position-relative">
-                    <div class="position-relative">
+                    style="display: flex; justify-content: center; position: relative; border-radius: 10px;">
+                    <div class="team-item position-relative" style="border-radius: 10px;">
+                        <div class="position-relative">
                             <img class="img-fluid" src="img/PersonalPhotos1/Adam Richmond.jpg" alt=""
                                 style="height: 300px; width:300px;">
                         </div>
-                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+                        <div class="bg-light text-center p-4"
+                            style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Adam Richmond</h3>
                             <span class="text-primary">Portfolio management</span>
                             <br /><br />
@@ -1070,7 +1091,8 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Christine Elias .jpg" alt=""
                                 style="height: 300px; width:300px;">
                         </div>
-                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+                        <div class="bg-light text-center p-4"
+                            style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Christine Elias</h3>
                             <span class="text-primary">Director of Architectural Engineering </span>
                             <br /><br />
@@ -1087,7 +1109,8 @@
                             <img class="img-fluid" src="img/PersonalPhotos1/Makram Luke .jpg" alt=""
                                 style="height: 300px; width:300px;">
                         </div>
-                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+                        <div class="bg-light text-center p-4"
+                            style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Makram Luke</h3>
                             <span class="text-primary">Director of Conceptual design and BIM</span>
                         </div>
@@ -1097,13 +1120,14 @@
 
                 <!-- Team Member 7 -->
                 <div class="col-lg-3 col-md-3 wow fadeInUp founder-container-team" data-wow-delay="0.3s"
-                style="display: flex; justify-content: center; position: relative;">
-                <div class="team-item position-relative">
-                    <div class="position-relative">
+                    style="display: flex; justify-content: center; position: relative;">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
                             <img class="img-fluid" src="img/PersonalPhotos1/Joseph Henein.jpg" alt=""
                                 style="height: 300px; width:300px;">
                         </div>
-                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+                        <div class="bg-light text-center p-4"
+                            style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Joseph Henein</h3>
                             <span class="text-primary">Legal Counsel</span>
                             <br /><br />
@@ -1115,13 +1139,14 @@
 
                 <!-- Team Member 8 -->
                 <div class="col-lg-3 col-md-3 wow fadeInUp founder-container-team" data-wow-delay="0.3s"
-                style="display: flex; justify-content: center; position: relative;">
-                <div class="team-item position-relative">
-                    <div class="position-relative">
+                    style="display: flex; justify-content: center; position: relative;">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
                             <img class="img-fluid" src="img/PersonalPhotos1/Raghad Malallah.jpg" alt=""
                                 style="height: 300px; width:300px;">
                         </div>
-                        <div class="bg-light text-center p-4" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+                        <div class="bg-light text-center p-4"
+                            style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
                             <h3 class="mt-2">Raghad Malallah</h3>
                             <span class="text-primary">Director of Marketing and Business Development</span>
                         </div>
@@ -1239,7 +1264,7 @@
 
         // Close the modal when clicking outside of it
         window.onclick = function (event) {
-            const modalIds = ["minabioModal", "williambioModal", "banbioModal", "mariambioModal","sambioModal"];
+            const modalIds = ["minabioModal", "williambioModal", "banbioModal", "mariambioModal", "sambioModal"];
             modalIds.forEach(modalId => {
                 const modal = document.getElementById(modalId);
                 // Check if the clicked target is the modal background
@@ -1252,22 +1277,22 @@
     </script>
 
 
-<!-- JavaScript to Toggle the Ordinary Team Section and Button Text -->
-<script>
-    function toggleTeamMembers() {
-        const ordinaryTeam = document.getElementById("ordinaryTeam");
-        const teamButton = document.getElementById("teamButton");
+    <!-- JavaScript to Toggle the Ordinary Team Section and Button Text -->
+    <script>
+        function toggleTeamMembers() {
+            const ordinaryTeam = document.getElementById("ordinaryTeam");
+            const teamButton = document.getElementById("teamButton");
 
-        // Toggle the display of the ordinary team section and button text
-        if (ordinaryTeam.style.display === "none" || ordinaryTeam.style.display === "") {
-            ordinaryTeam.style.display = "block";
-            teamButton.innerText = "Hide Team Members"; // Change button text to "Show Less"
-        } else {
-            ordinaryTeam.style.display = "none";
-            teamButton.innerText = "Show Team Members"; // Change button text to "Show More"
+            // Toggle the display of the ordinary team section and button text
+            if (ordinaryTeam.style.display === "none" || ordinaryTeam.style.display === "") {
+                ordinaryTeam.style.display = "block";
+                teamButton.innerText = "Hide Team Members"; // Change button text to "Show Less"
+            } else {
+                ordinaryTeam.style.display = "none";
+                teamButton.innerText = "Show Team Members"; // Change button text to "Show More"
+            }
         }
-    }
-</script>
+    </script>
 
     <script>
         // JavaScript to detect when the vision section is in view
